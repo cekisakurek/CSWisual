@@ -20,6 +20,7 @@ CSWisual is an iOS/macOS(catalyst) application for visualizing CSV data and plot
 <img src="https://raw.githubusercontent.com/cekisakurek/CSWisual/main/Screenshots/2.png" alt="Awesome README Templates" />
 <img src="https://raw.githubusercontent.com/cekisakurek/CSWisual/main/Screenshots/3.png" alt="Awesome README Templates" />
 <img src="https://raw.githubusercontent.com/cekisakurek/CSWisual/main/Screenshots/4.png" alt="Awesome README Templates" />
+
 ## Requirements
 
 - iOS 14.0+ / macOS 11.0+
