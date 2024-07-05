@@ -15,7 +15,7 @@ extension CSVData.Column {
         let stringTypeCount: Int
         let dateTypeCount: Int
         let uniqueValues: Set<String>
-        
+
         var uniqueCount: Int {
             uniqueValues.count
         }

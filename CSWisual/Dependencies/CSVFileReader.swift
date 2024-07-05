@@ -18,9 +18,9 @@ struct CSVFileReader {
 
 extension CSVFileReader: DependencyKey {
     static var liveValue = Self { url, delimiter in
-        
+
         let hasHeader = true
-        
+
         guard let stream = InputStream(url: url)
         else {
             throw CSVFileReaderError.cannotOpenStream
@@ -32,19 +32,40 @@ extension CSVFileReader: DependencyKey {
         )
 
         let raw = reader.map( { $0 })
-        
+
         let parsed = reader.headerRow?.enumerated().map { index, name  in
             let data = raw.map({ $0[index] })
             let column = CSVData.Column(name: name, data: data)
             return column
         }
-        
+
         return CSVData(raw: raw, headers: reader.headerRow ?? [], columns: parsed ?? [])
     }
 
     static var testValue: CSVFileReader = Self(
-        readFromURL: { _, _ in
-            CSVData(raw: [], headers: [], columns: [])
+        readFromURL: { url, delimiter in
+
+            let hasHeader = true
+
+            guard let stream = InputStream(url: url)
+            else {
+                throw CSVFileReaderError.cannotOpenStream
+            }
+            let reader = try CSVReader(
+                stream: stream,
+                hasHeaderRow: hasHeader,
+                delimiter: delimiter
+            )
+
+            let raw = reader.map( { $0 })
+
+            let parsed = reader.headerRow?.enumerated().map { index, name  in
+                let data = raw.map({ $0[index] })
+                let column = CSVData.Column(name: name, data: data)
+                return column
+            }
+
+            return CSVData(raw: raw, headers: reader.headerRow ?? [], columns: parsed ?? [])
         }
     )
 }

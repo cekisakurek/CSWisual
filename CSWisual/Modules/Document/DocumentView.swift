@@ -9,7 +9,9 @@ import SwiftUI
 import ComposableArchitecture
 
 struct DocumentView: View {
+
     let store: StoreOf<DocumentModule>
+
     var body: some View {
         TabView {
             RawAnalysisCollectionView(rows: store.data.raw, headers: store.data.headers)
@@ -22,4 +24,18 @@ struct DocumentView: View {
                 }
         }
     }
+}
+
+#Preview {
+    DocumentView(
+        store: Store(
+            initialState: DocumentModule.State(
+                data: .init(
+                    raw: [],
+                    headers: [],
+                    columns: [])
+            ),
+            reducer: { DocumentModule() }
+        )
+    )
 }

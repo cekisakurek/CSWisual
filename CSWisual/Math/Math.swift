@@ -5,10 +5,10 @@
 //  Created by Cihan Emre Kisakurek on 26.06.24.
 //
 
-
 import Foundation
 import SigmaSwiftStatistics
 
+// swiftlint:disable identifier_name
 func leastSquaresRegression(_ points: [Double: Double]) -> (Double, Double) {
     var total_x = 0.0
     var total_xy = 0.0
@@ -25,3 +25,4 @@ func leastSquaresRegression(_ points: [Double: Double]) -> (Double, Double) {
     let b = (total_y - m * total_x) / N
     return (b, m)
 }
+// swiftlint:enable identifier_name

@@ -11,7 +11,7 @@ struct MatrixEntry: Equatable, Identifiable {
     let columnLabel: String
     let rowLabel: String
     let value: Double
-    let x: Double
-    let y: Double
+    let xValue: Double
+    let yValue: Double
     let id = UUID()
 }

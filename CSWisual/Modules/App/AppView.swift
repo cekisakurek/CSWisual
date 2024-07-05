@@ -10,23 +10,28 @@ import ComposableArchitecture
 import UniformTypeIdentifiers
 
 struct AppView: View {
+
     @Bindable var store: StoreOf<AppModule>
-    
+
     var body: some View {
         IfLetStore(
             store.scope(state: \.documentState, action: \.documentAction ),
             then: { DocumentView(store: $0) },
             else: {
-                Button(
-                    action: { store.send(.showDocumentPicker) },
-                    label: { Text("Open") }
-                )
+                if store.readingFile {
+                    ProgressView()
+                } else {
+                    Button(
+                        action: { store.send(.showDocumentPicker) },
+                        label: { Text("Open") }
+                    )
+                }
             }
         )
-        .sheet(
+        .fileImporter(
             isPresented: $store.showDocumentPicker,
-            content: { DocumentPicker() }
-        )
+            allowedContentTypes: [UTType.commaSeparatedText],
+            onCompletion: { store.send(.openFile($0)) })
         .task {
             store.send(.appDidLaunched)
         }

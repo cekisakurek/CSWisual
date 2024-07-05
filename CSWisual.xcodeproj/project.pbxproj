@@ -13,7 +13,6 @@
 		140E7FED2C3569D800E68335 /* ColumnType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E7FEC2C3569D800E68335 /* ColumnType.swift */; };
 		140E7FEF2C3569F400E68335 /* ColumnTypeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E7FEE2C3569F400E68335 /* ColumnTypeInfo.swift */; };
 		140F22F22C2EAA0900E75D58 /* View+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140F22F12C2EAA0900E75D58 /* View+Rotation.swift */; };
-		140F22F42C2EB58F00E75D58 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140F22F32C2EB58F00E75D58 /* SplitView.swift */; };
 		140FC7402C2D8FE7005D35E7 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FC73F2C2D8FE7005D35E7 /* Calculator.swift */; };
 		140FC7432C2D9E14005D35E7 /* Array+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FC7422C2D9E14005D35E7 /* Array+Math.swift */; };
 		140FC7452C2D9E35005D35E7 /* Double+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FC7442C2D9E35005D35E7 /* Double+Round.swift */; };
@@ -24,7 +23,6 @@
 		14485C662C37FF0900A74468 /* HeatmapChartResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C652C37FF0900A74468 /* HeatmapChartResult.swift */; };
 		14485C682C38003100A74468 /* IndexPath+Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C672C38003100A74468 /* IndexPath+Grid.swift */; };
 		14858E9F2C2C84580087FB93 /* BinEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14858E9E2C2C84580087FB93 /* BinEdge.swift */; };
-		14858EA12C2C84AA0087FB93 /* ColumnAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14858EA02C2C84AA0087FB93 /* ColumnAnalysis.swift */; };
 		14858EA32C2CD3F50087FB93 /* ChartDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14858EA22C2CD3F50087FB93 /* ChartDrawView.swift */; };
 		1499E10E2C2C1F430063B7D8 /* RawDataCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E10D2C2C1F430063B7D8 /* RawDataCollectionView.swift */; };
 		1499E1102C2C1F5D0063B7D8 /* GridCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E10F2C2C1F5D0063B7D8 /* GridCollectionViewLayout.swift */; };
@@ -46,7 +44,6 @@
 		1499E1512C2C605C0063B7D8 /* DistributionChartModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1502C2C605C0063B7D8 /* DistributionChartModule.swift */; };
 		1499E1532C2C60A00063B7D8 /* HeatmapChartModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1522C2C60A00063B7D8 /* HeatmapChartModule.swift */; };
 		14B5A6482C2B3B6500B3EA26 /* CSWisualApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6472C2B3B6500B3EA26 /* CSWisualApp.swift */; };
-		14B5A64A2C2B3B6500B3EA26 /* CSWisualDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6492C2B3B6500B3EA26 /* CSWisualDocument.swift */; };
 		14B5A64C2C2B3B6500B3EA26 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A64B2C2B3B6500B3EA26 /* AppView.swift */; };
 		14B5A64E2C2B3B6600B3EA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B5A64D2C2B3B6600B3EA26 /* Assets.xcassets */; };
 		14B5A6532C2B3B6600B3EA26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B5A6522C2B3B6600B3EA26 /* Preview Assets.xcassets */; };
@@ -56,16 +53,13 @@
 		14B5A6772C2B3BFA00B3EA26 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 14B5A6762C2B3BFA00B3EA26 /* ComposableArchitecture */; };
 		14B5A67A2C2B3D8D00B3EA26 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6792C2B3D8D00B3EA26 /* AppModule.swift */; };
 		14B5A67D2C2B420E00B3EA26 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B5A67C2C2B420E00B3EA26 /* MobileCoreServices.framework */; platformFilter = ios; };
-		14B5A67F2C2B42B700B3EA26 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A67E2C2B42B700B3EA26 /* DocumentPicker.swift */; };
 		14B5A6812C2B4F0400B3EA26 /* DocumentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6802C2B4F0400B3EA26 /* DocumentModule.swift */; };
 		14B5A6832C2B4FFC00B3EA26 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6822C2B4FFC00B3EA26 /* DocumentView.swift */; };
 		14B5A6882C2B55AB00B3EA26 /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 14B5A6872C2B55AB00B3EA26 /* CSV */; };
 		14B5A68F2C2B5FFD00B3EA26 /* BitcoinTest.csv in Resources */ = {isa = PBXBuildFile; fileRef = 14B5A68E2C2B5FFD00B3EA26 /* BitcoinTest.csv */; };
-		14E311FA2C3819C20011FEB9 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E311F62C3819C20011FEB9 /* 1.png */; };
-		14E311FB2C3819C20011FEB9 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E311F72C3819C20011FEB9 /* 2.png */; };
-		14E311FC2C3819C20011FEB9 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E311F82C3819C20011FEB9 /* 4.png */; };
-		14E311FD2C3819C20011FEB9 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E311F92C3819C20011FEB9 /* 3.png */; };
-		14EBEAF42C3422380011408D /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBEAF32C3422380011408D /* FileReaderTests.swift */; };
+		14E311FF2C3820290011FEB9 /* ChartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E311FE2C3820290011FEB9 /* ChartType.swift */; };
+		14E312012C3828490011FEB9 /* RealEstateFileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E312002C3828490011FEB9 /* RealEstateFileReaderTests.swift */; };
+		14EBEAF42C3422380011408D /* BitcoinDataFileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBEAF32C3422380011408D /* BitcoinDataFileReaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +86,6 @@
 		140E7FEC2C3569D800E68335 /* ColumnType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnType.swift; sourceTree = "<group>"; };
 		140E7FEE2C3569F400E68335 /* ColumnTypeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnTypeInfo.swift; sourceTree = "<group>"; };
 		140F22F12C2EAA0900E75D58 /* View+Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Rotation.swift"; sourceTree = "<group>"; };
-		140F22F32C2EB58F00E75D58 /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		140FC73F2C2D8FE7005D35E7 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		140FC7422C2D9E14005D35E7 /* Array+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Math.swift"; sourceTree = "<group>"; };
 		140FC7442C2D9E35005D35E7 /* Double+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
@@ -103,7 +96,6 @@
 		14485C652C37FF0900A74468 /* HeatmapChartResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapChartResult.swift; sourceTree = "<group>"; };
 		14485C672C38003100A74468 /* IndexPath+Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+Grid.swift"; sourceTree = "<group>"; };
 		14858E9E2C2C84580087FB93 /* BinEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinEdge.swift; sourceTree = "<group>"; };
-		14858EA02C2C84AA0087FB93 /* ColumnAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnAnalysis.swift; sourceTree = "<group>"; };
 		14858EA22C2CD3F50087FB93 /* ChartDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDrawView.swift; sourceTree = "<group>"; };
 		1499E10D2C2C1F430063B7D8 /* RawDataCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDataCollectionView.swift; sourceTree = "<group>"; };
 		1499E10F2C2C1F5D0063B7D8 /* GridCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -125,7 +117,6 @@
 		1499E1522C2C60A00063B7D8 /* HeatmapChartModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapChartModule.swift; sourceTree = "<group>"; };
 		14B5A6442C2B3B6500B3EA26 /* CSWisual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSWisual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B5A6472C2B3B6500B3EA26 /* CSWisualApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWisualApp.swift; sourceTree = "<group>"; };
-		14B5A6492C2B3B6500B3EA26 /* CSWisualDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWisualDocument.swift; sourceTree = "<group>"; };
 		14B5A64B2C2B3B6500B3EA26 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		14B5A64D2C2B3B6600B3EA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B5A64F2C2B3B6600B3EA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,7 +129,6 @@
 		14B5A6682C2B3B6600B3EA26 /* CSWisualUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWisualUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14B5A6792C2B3D8D00B3EA26 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 		14B5A67C2C2B420E00B3EA26 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		14B5A67E2C2B42B700B3EA26 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		14B5A6802C2B4F0400B3EA26 /* DocumentModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModule.swift; sourceTree = "<group>"; };
 		14B5A6822C2B4FFC00B3EA26 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		14B5A68E2C2B5FFD00B3EA26 /* BitcoinTest.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BitcoinTest.csv; sourceTree = "<group>"; };
@@ -146,7 +136,9 @@
 		14E311F72C3819C20011FEB9 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		14E311F82C3819C20011FEB9 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		14E311F92C3819C20011FEB9 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		14EBEAF32C3422380011408D /* FileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderTests.swift; sourceTree = "<group>"; };
+		14E311FE2C3820290011FEB9 /* ChartType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartType.swift; sourceTree = "<group>"; };
+		14E312002C3828490011FEB9 /* RealEstateFileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateFileReaderTests.swift; sourceTree = "<group>"; };
+		14EBEAF32C3422380011408D /* BitcoinDataFileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinDataFileReaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +189,6 @@
 				140FC7442C2D9E35005D35E7 /* Double+Round.swift */,
 				140FC7462C2D9E4B005D35E7 /* String+DoubleFormatting.swift */,
 				140F22F12C2EAA0900E75D58 /* View+Rotation.swift */,
-				140F22F32C2EB58F00E75D58 /* SplitView.swift */,
 				14485C672C38003100A74468 /* IndexPath+Grid.swift */,
 			);
 			path = Extentions;
@@ -212,6 +203,7 @@
 				14485C652C37FF0900A74468 /* HeatmapChartResult.swift */,
 				14485C632C37FEFD00A74468 /* MatrixEntry.swift */,
 				1499E1302C2C331D0063B7D8 /* ChartData.swift */,
+				14E311FE2C3820290011FEB9 /* ChartType.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -221,7 +213,6 @@
 			children = (
 				14485C5E2C37FED600A74468 /* Chart */,
 				140E7FE92C35696600E68335 /* Data */,
-				14858EA02C2C84AA0087FB93 /* ColumnAnalysis.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,7 +347,6 @@
 				14B5A64D2C2B3B6600B3EA26 /* Assets.xcassets */,
 				14B5A64F2C2B3B6600B3EA26 /* Info.plist */,
 				14B5A6502C2B3B6600B3EA26 /* CSWisual.entitlements */,
-				14B5A6492C2B3B6500B3EA26 /* CSWisualDocument.swift */,
 				14B5A6512C2B3B6600B3EA26 /* Preview Content */,
 			);
 			path = CSWisual;
@@ -376,7 +366,8 @@
 				1499E1392C2C3DD40063B7D8 /* RealEstateTest.csv */,
 				14B5A68E2C2B5FFD00B3EA26 /* BitcoinTest.csv */,
 				14B5A65C2C2B3B6600B3EA26 /* CSWisualTests.swift */,
-				14EBEAF32C3422380011408D /* FileReaderTests.swift */,
+				14EBEAF32C3422380011408D /* BitcoinDataFileReaderTests.swift */,
+				14E312002C3828490011FEB9 /* RealEstateFileReaderTests.swift */,
 			);
 			path = CSWisualTests;
 			sourceTree = "<group>";
@@ -397,7 +388,6 @@
 				1499E1402C2C4C050063B7D8 /* ChartsContainer */,
 				1499E13F2C2C4B4C0063B7D8 /* Document */,
 				1499E13E2C2C49810063B7D8 /* App */,
-				14B5A67E2C2B42B700B3EA26 /* DocumentPicker.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -429,6 +419,7 @@
 			buildConfigurationList = 14B5A66C2C2B3B6600B3EA26 /* Build configuration list for PBXNativeTarget "CSWisual" */;
 			buildPhases = (
 				14B5A6402C2B3B6500B3EA26 /* Sources */,
+				14E312022C38292C0011FEB9 /* Swiftlint */,
 				14B5A6412C2B3B6500B3EA26 /* Frameworks */,
 				14B5A6422C2B3B6500B3EA26 /* Resources */,
 			);
@@ -535,14 +526,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14E311FB2C3819C20011FEB9 /* 2.png in Resources */,
-				14E311FC2C3819C20011FEB9 /* 4.png in Resources */,
 				14B5A68F2C2B5FFD00B3EA26 /* BitcoinTest.csv in Resources */,
-				14E311FD2C3819C20011FEB9 /* 3.png in Resources */,
 				1499E13A2C2C3DD40063B7D8 /* RealEstateTest.csv in Resources */,
 				14B5A6532C2B3B6600B3EA26 /* Preview Assets.xcassets in Resources */,
 				14B5A64E2C2B3B6600B3EA26 /* Assets.xcassets in Resources */,
-				14E311FA2C3819C20011FEB9 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +549,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14E312022C38292C0011FEB9 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14B5A6402C2B3B6500B3EA26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -575,10 +584,7 @@
 				140E7FEB2C35697800E68335 /* CSVColumn+Private.swift in Sources */,
 				14B5A67A2C2B3D8D00B3EA26 /* AppModule.swift in Sources */,
 				140E7FEF2C3569F400E68335 /* ColumnTypeInfo.swift in Sources */,
-				14B5A64A2C2B3B6500B3EA26 /* CSWisualDocument.swift in Sources */,
 				14485C642C37FEFD00A74468 /* MatrixEntry.swift in Sources */,
-				14858EA12C2C84AA0087FB93 /* ColumnAnalysis.swift in Sources */,
-				14B5A67F2C2B42B700B3EA26 /* DocumentPicker.swift in Sources */,
 				14B5A6812C2B4F0400B3EA26 /* DocumentModule.swift in Sources */,
 				14858EA32C2CD3F50087FB93 /* ChartDrawView.swift in Sources */,
 				1499E1472C2C59A10063B7D8 /* ChartsModule.swift in Sources */,
@@ -599,7 +605,7 @@
 				1499E1442C2C4C4D0063B7D8 /* ChartsContainerView.swift in Sources */,
 				140E7FE82C35691D00E68335 /* Column.swift in Sources */,
 				14485C622C37FEED00A74468 /* DistributionChartResult.swift in Sources */,
-				140F22F42C2EB58F00E75D58 /* SplitView.swift in Sources */,
+				14E311FF2C3820290011FEB9 /* ChartType.swift in Sources */,
 				140FC7452C2D9E35005D35E7 /* Double+Round.swift in Sources */,
 				140F22F22C2EAA0900E75D58 /* View+Rotation.swift in Sources */,
 				1499E1492C2C59DF0063B7D8 /* ProbabilityChartModule.swift in Sources */,
@@ -617,7 +623,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EBEAF42C3422380011408D /* FileReaderTests.swift in Sources */,
+				14E312012C3828490011FEB9 /* RealEstateFileReaderTests.swift in Sources */,
+				14EBEAF42C3422380011408D /* BitcoinDataFileReaderTests.swift in Sources */,
 				14B5A65D2C2B3B6600B3EA26 /* CSWisualTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,7 +691,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -745,7 +752,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

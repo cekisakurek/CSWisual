@@ -9,16 +9,17 @@
 
 import Foundation
 import SigmaSwiftStatistics
-/**
+/*
  Kernel density estimation using a Gaussian kernel and automatic bandwidth
  selection via Silverman's rule-of-thumb.
  */
+// swiftlint:disable identifier_name
 public class KernelDensityEstimation {
-    let data : [Double]
+    let data: [Double]
     /** Bandwidth used in evaluate() method */
-    public let bandwidth : Double
+    public let bandwidth: Double
     let n: Double
-    
+
     /**
      Creates a new instance from an array of Doubles
      
@@ -41,21 +42,19 @@ public class KernelDensityEstimation {
     public init?(_ data: [Double], bandwidth: Double? = nil) {
         self.data = data
         self.n = Double(data.count)
-        
+
         if bandwidth != nil {
             self.bandwidth = bandwidth!
         } else {
             // Silverman's rule-of-thumb; see
             // https://en.wikipedia.org/wiki/Kernel_density_estimation
-            
-            
             guard let sd = Sigma.standardDeviationSample(data) else {
                 return nil
             }
             self.bandwidth = 1.06 * sd * pow(n, Double(-1.0/5.0))
         }
     }
-    
+
     /**
      Evaluates the Kernel Density Estimator at the given value, `x`.
      
@@ -68,14 +67,14 @@ public class KernelDensityEstimation {
     public func evaluate(_ x: Double) -> Double {
         // Go through each data point, calculate its contribution at the
         // given x.
-        var result : Double = 0
+        var result: Double = 0
         for d in data {
             result += gaussianKernel(x, mean: d, sd: bandwidth) / n
         }
-        
+
         return result
     }
-    
+
     /**
      Calculates the density of a Gaussian distribution at location `x`,
      given it has a mean at a specified data point and a standard deviation
@@ -104,7 +103,7 @@ public class Normal {
         self.m = m
         self.v = v
     }
-    
+
     public convenience init(mean: Double, sd: Double) {
         // This contructor takes the mean and standard deviation, which is the more
         // common parameterisation of a normal distribution.
@@ -125,13 +124,12 @@ public class Normal {
 //    }
 
     public func pdf(_ x: Double) -> Double {
-        
-        return (1/pow(self.v*2*Double.pi,0.5))*exp(-pow(x-self.m,2)/(2*self.v))
-    }
-    
-    public func cdf(_ x: Double) -> Double {
-        return (1 + erf((x-self.m)/pow(2*self.v,0.5)))/2
+        return (1 / pow(self.v * 2 * Double.pi, 0.5)) * exp(-pow(x - self.m, 2) / (2 * self.v))
     }
 
+    public func cdf(_ x: Double) -> Double {
+        return (1 + erf((x - self.m) / pow(2 * self.v, 0.5))) / 2
+    }
 
 }
+// swiftlint:enable identifier_name

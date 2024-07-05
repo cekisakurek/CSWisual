@@ -8,9 +8,9 @@
 import Foundation
 
 extension CSVData.Column {
-    
+
     static internal func findType(data: [String]) -> TypeInfo {
-        // Unknown type is also means empty
+        // Unknown type is means empty string
         var unknownTypeCount = 0
         var intTypeCount = 0
         var doubleTypeCount = 0
@@ -21,19 +21,16 @@ extension CSVData.Column {
             let type = Self.typeOf(value: value)
             uniqueSet.insert(value)
             switch type {
-                case .int:
-                    intTypeCount += 1
-                case .double:
-                    doubleTypeCount += 1
-                case .string:
-                    stringTypeCount += 1
-                case .date:
-                    dateTypeCount += 1
-                case .unknown:
-                    fallthrough
-                default:
-                    unknownTypeCount += 1
-                    break
+            case .int:
+                intTypeCount += 1
+            case .double:
+                doubleTypeCount += 1
+            case .string:
+                stringTypeCount += 1
+            case .date:
+                dateTypeCount += 1
+            default:
+                unknownTypeCount += 1
             }
         }
         return TypeInfo(
@@ -45,29 +42,26 @@ extension CSVData.Column {
             uniqueValues: uniqueSet
         )
     }
-    
+
     private static func typeOf(value: String) -> ColumnType {
-        
+
         guard !value.isEmpty else { return .unknown }
-        
+
         let val = value.replacingOccurrences(of: ",", with: ".")
-        
-        if let f = Double(val) {
-            if floor(f) == f {
+
+        if let doubleValue = Double(val) {
+            if floor(doubleValue) == doubleValue {
                 return .int
-            }
-            else {
+            } else {
                 return .double
             }
-        }
-        else {
+        } else {
             let dateFormatter = DateFormatter()
             // TODO: add more date formats for autodetect
             dateFormatter.dateFormat = "yyyy-MM-dd"
-            if let _ = dateFormatter.date(from: value) {
+            if dateFormatter.date(from: value) != nil {
                 return .date
             }
-            
             return .string
         }
     }

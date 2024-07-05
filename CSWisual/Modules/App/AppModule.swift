@@ -10,57 +10,67 @@ import Foundation
 
 @Reducer
 struct AppModule {
-    
+
+    // MARK: - State
     @ObservableState
     struct State: Equatable {
         var showDocumentPicker: Bool = false
+        var readingFile: Bool = false
         var documentState: DocumentModule.State?
     }
-    
+
+    // MARK: - Actions
     enum Action: BindableAction {
         case binding(BindingAction<State>)
         case appDidLaunched
         case showDocumentPicker
-        case openFile(URL)
+        case openFile(Result<URL, Error>)
         case fileOpenResult(Result<CSVData, Error>)
-        
+
         // Child module actions
         case documentAction(DocumentModule.Action)
     }
-    
+
+    // MARK: - Dependencies
     @Dependency(\.fileReader.readFromURL) var readFile
-    
+
+    // MARK: - Body
     var body: some Reducer<State, Action> {
         BindingReducer()
         Reduce { state, action in
             switch action {
             case .appDidLaunched:
-                // TODO: Remove this
-                let url = Bundle.main.url(forResource: "RealEstateTest", withExtension: "csv")!
-//                let url = Bundle.main.url(forResource: "BitcoinTest", withExtension: "csv")!
-                return .send(.openFile(url))
+                return .none
             case .showDocumentPicker:
                 state.showDocumentPicker = true
                 return .none
-            case .openFile(let url):
+            case .openFile(.success(let url)):
+                state.readingFile = true
                 return .run { send in
                     await send(
                         .fileOpenResult(
                             Result {
+                                // TODO: Add support for other delimeters
                                 try await readFile(url, UnicodeScalar(","))
                             }
                         )
                     )
                 }
-            case .documentAction(_):
+            case .openFile(.failure(let error)):
+                state.readingFile = false
+                print(error)
+                return .none
+            case .documentAction:
                 return .none
             case .fileOpenResult(.success(let data)):
+                state.readingFile = false
                 state.documentState = DocumentModule.State(data: data)
                 return .none
             case .fileOpenResult(.failure(let error)):
+                state.readingFile = false
                 print(error)
                 return .none
-            case .binding(_):
+            case .binding:
                 return .none
             }
         }

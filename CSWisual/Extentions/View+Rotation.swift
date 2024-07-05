@@ -8,6 +8,7 @@
 import SwiftUI
 
 private struct VerticalLayout: Layout {
+
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
         let size = subviews.first!.sizeThatFits(.unspecified)
         return .init(width: size.height, height: size.width)
@@ -19,16 +20,19 @@ private struct VerticalLayout: Layout {
 }
 
 private struct RotatedContent: ViewModifier {
+
     let angle: Angle
-    
+
     func body(content: Content) -> some View {
-        VerticalLayout(){
+        VerticalLayout {
             content
         }
         .rotationEffect(angle)
     }
 }
+
 extension View {
+
     func rotate(_ angle: Angle) -> some View {
         self.modifier(RotatedContent(angle: angle))
     }

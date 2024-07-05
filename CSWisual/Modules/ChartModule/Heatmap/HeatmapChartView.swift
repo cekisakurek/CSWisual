@@ -10,15 +10,19 @@ import Charts
 import ComposableArchitecture
 
 struct HeatmapChartView: View {
+
     @Bindable var store: StoreOf<HeatmapChartModule>
+
+    // TODO: Let users customise these colors
     let gradientColors: [Color] = [.blue, .green, .yellow, .orange, .red]
+
     var body: some View {
         VStack {
             if let heatmap = store.heatmap {
                 Chart {
                     ForEach(heatmap.data) {
-                        let xVal = Int($0.x)
-                        let yVal = Int($0.y)
+                        let xVal = Int($0.xValue)
+                        let yVal = Int($0.yValue)
                         RectangleMark(
                             xStart: PlottableValue.value("xStart", xVal),
                             xEnd: PlottableValue.value("xEnd", xVal + 1),
@@ -29,11 +33,14 @@ struct HeatmapChartView: View {
                     }
                 }
                 .chartYAxis {
-                    AxisMarks(position: .leading, values: Array(stride(from: 0, through: heatmap.labels.count - 1, by: 1))) {
+                    AxisMarks(
+                        position: .leading,
+                        values: Array(stride(from: 0, through: heatmap.labels.count - 1, by: 1))
+                    ) {
                         AxisGridLine()
                         AxisTick()
                         let name = heatmap.labels[$0.index]
-                        AxisValueLabel{
+                        AxisValueLabel {
                             Text(name)
                         }
                     }
@@ -43,7 +50,7 @@ struct HeatmapChartView: View {
                         AxisGridLine()
                         AxisTick()
                         let name = heatmap.labels[$0.index]
-                        AxisValueLabel{
+                        AxisValueLabel {
                             Text(name)
                                 .rotate(.degrees(-90))
                         }
@@ -54,15 +61,18 @@ struct HeatmapChartView: View {
             } else {
                 ProgressView()
             }
-            
         }
         .onAppear {
             store.send(.calculate)
         }
-        
     }
 }
 
-//#Preview {
-//    HeatmapChartView()
-//}
+#Preview {
+    HeatmapChartView(
+        store: Store(
+            initialState: HeatmapChartModule.State(columns: []),
+            reducer: { HeatmapChartModule() }
+        )
+    )
+}

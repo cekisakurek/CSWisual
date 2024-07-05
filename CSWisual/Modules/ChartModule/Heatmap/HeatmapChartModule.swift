@@ -7,40 +7,41 @@
 
 import Foundation
 import ComposableArchitecture
-import SigmaSwiftStatistics
-
-
 
 @Reducer
 struct HeatmapChartModule {
+
+    // MARK: - State
     @ObservableState
-    struct State: Equatable {
+    struct State: Equatable, Identifiable {
         let columns: [CSVData.Column]
+        let headers: [String]
         var heatmap: HeatmapChartResult?
-        var headers: [String] {
-            columns.map({ $0.name })
-        }
-        
+
         let id = UUID()
-        
+
         init(columns: [CSVData.Column]) {
             self.columns = columns
-            
+            self.headers = columns.map({ $0.name })
+
         }
     }
-    
-    enum Action{
+
+    // MARK: - Actions
+    enum Action {
         case calculate
         case calculationComplete(Result<HeatmapChartResult, Error>)
     }
 
+    // MARK: - Dependencies
     @Dependency(\.calculator.heatmapResult) var calculate
-    
+
+    // MARK: - Body
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .calculate:
-                return .run { [columns = state.columns, headers = state.headers] send in
+                return .run { [columns = state.columns] send in
                     await send(
                         .calculationComplete(
                             Result {
@@ -50,10 +51,10 @@ struct HeatmapChartModule {
                     )
                 }
             case .calculationComplete(.success(let result)):
-//                print("Calculation complete for \(state.headers)")
                 state.heatmap = result
                 return .none
             case .calculationComplete(.failure(let error)):
+                // TODO: Show alert
                 print(error)
                 state.heatmap = nil
                 return .none

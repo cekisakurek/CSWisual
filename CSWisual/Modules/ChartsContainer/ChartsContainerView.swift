@@ -9,6 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 
 struct ChartsContainerView: View {
+
     @Bindable var store: StoreOf<ChartsContainerModule>
 
     var body: some View {
@@ -24,15 +25,16 @@ struct ChartsContainerView: View {
                 }
             },
             detail: {
-                GeometryReader { geometry in
+                GeometryReader { geo in
+                    let spacing = (geo.safeAreaInsets.top + geo.safeAreaInsets.top)
                     ScrollView {
                         VStack {
                             ForEach(store.scope(state: \.charts, action: \.chartActions)) { rowStore in
                                 GroupBox(rowStore.columnName) {
                                     ChartDrawView(store: rowStore)
                                         .frame(
-                                            minHeight: geometry.size.height / 2.0,
-                                            maxHeight: geometry.size.height - (geometry.safeAreaInsets.top + geometry.safeAreaInsets.top)
+                                            minHeight: geo.size.height / 2.0,
+                                            maxHeight: geo.size.height - spacing
                                         )
                                 }
                                 .padding()
@@ -56,6 +58,13 @@ struct ChartsContainerView: View {
     }
 }
 
-//#Preview {
-//    GraphView()
-//}
+#Preview {
+    ChartsContainerView(
+        store: Store(
+            initialState: ChartsContainerModule.State(
+                columns: []
+            ),
+            reducer: { ChartsContainerModule() }
+        )
+    )
+}

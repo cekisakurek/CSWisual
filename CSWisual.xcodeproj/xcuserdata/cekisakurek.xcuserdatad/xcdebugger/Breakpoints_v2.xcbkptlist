@@ -20,53 +20,5 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "83AC0511-40CF-4099-85A7-7B16CADC2604"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CSWisualTests/CSWisualTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "testExample()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "83AC0511-40CF-4099-85A7-7B16CADC2604 - 9869d630d062fbf6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for CSWisualTests.CSWisualTests.testExample() async throws -&gt; ()"
-                  moduleName = "CSWisualTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cekisakurek/Repo/github/CSWisual/CSWisualTests/CSWisualTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  uuid = "83AC0511-40CF-4099-85A7-7B16CADC2604 - 4b8094d9d3fc7d59"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for CSWisualTests.CSWisualTests.testExample() async throws -&gt; ()"
-                  moduleName = "CSWisualTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cekisakurek/Repo/github/CSWisual/CSWisualTests/CSWisualTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

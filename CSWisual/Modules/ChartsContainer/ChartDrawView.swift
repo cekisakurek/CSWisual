@@ -9,8 +9,9 @@ import SwiftUI
 import ComposableArchitecture
 
 struct ChartDrawView: View {
+
     let store: StoreOf<ChartsModule>
-    
+
     var body: some View {
         switch store.state {
         case .probability:
@@ -20,7 +21,6 @@ struct ChartDrawView: View {
                         store.send(.calculate)
                     }
             }
-            
         case .distrubution:
             if let store = store.scope(state: \.distrubution, action: \.distrubution) {
                 DistributionChartView(store: store)
@@ -28,7 +28,6 @@ struct ChartDrawView: View {
                         store.send(.calculate)
                     }
             }
-            
         case .heatmap:
             if let store = store.scope(state: \.heatmap, action: \.heatmap) {
                 HeatmapChartView(store: store)
@@ -40,6 +39,18 @@ struct ChartDrawView: View {
     }
 }
 
-//#Preview {
-//    ChartDrawView()
-//}
+#Preview {
+    ChartDrawView(
+        store: Store(
+            initialState: ChartsModule.State.distrubution(
+                .init(
+                    data: .init(
+                        name: "test",
+                        data: []
+                    )
+                )
+            ),
+            reducer: { ChartsModule() }
+        )
+    )
+}

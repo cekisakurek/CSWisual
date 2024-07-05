@@ -11,7 +11,8 @@ import CSV
 
 @Reducer
 struct DocumentModule {
-    
+
+    // MARK: - State
     @ObservableState
     struct State: Equatable {
         let data: CSVData
@@ -21,21 +22,25 @@ struct DocumentModule {
             self.chartContainerState = ChartsContainerModule.State(columns: data.columns)
         }
     }
-    
+
+    // MARK: - Actions
     enum Action: BindableAction {
         case binding(BindingAction<State>)
 
         // Child module actions
         case chartContainerAction(ChartsContainerModule.Action)
     }
-    
+
+    // MARK: - Dependencies
+
+    // MARK: - Body
     var body: some Reducer<State, Action> {
         BindingReducer()
-        Reduce { state, action in
+        Reduce { _, action in
             switch action {
-            case .chartContainerAction(_):
+            case .chartContainerAction:
                 return .none
-            case .binding(_):
+            case .binding:
                 return .none
             }
         }

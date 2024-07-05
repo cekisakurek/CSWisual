@@ -10,12 +10,7 @@ extension IndexPath {
     init(row: Int, column: Int) {
         self = IndexPath(item: column, section: row)
     }
-    
-    var column: Int {
-        item
-    }
-    
-    var row: Int {
-        section
-    }
+
+    var column: Int { item }
+    var row: Int { section }
 }
