@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
-
+import ComposableArchitecture
 @main
 struct CSWisualApp: App {
     var body: some Scene {
-        DocumentGroup(newDocument: CSWisualDocument()) { file in
-            ContentView(document: file.$document)
+        WindowGroup {
+            AppView(
+                store: Store(
+                    initialState: AppModule.State(),
+                    reducer: { AppModule() }
+                )
+            )
         }
     }
 }

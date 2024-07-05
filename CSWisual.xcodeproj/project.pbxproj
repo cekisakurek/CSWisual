@@ -7,14 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140E7FE62C3568AF00E68335 /* CSVData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E7FE52C3568AF00E68335 /* CSVData.swift */; };
+		140E7FE82C35691D00E68335 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E7FE72C35691D00E68335 /* Column.swift */; };
+		140E7FEB2C35697800E68335 /* CSVColumn+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E7FEA2C35697800E68335 /* CSVColumn+Private.swift */; };
+		140E7FED2C3569D800E68335 /* ColumnType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E7FEC2C3569D800E68335 /* ColumnType.swift */; };
+		140E7FEF2C3569F400E68335 /* ColumnTypeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E7FEE2C3569F400E68335 /* ColumnTypeInfo.swift */; };
+		140F22F22C2EAA0900E75D58 /* View+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140F22F12C2EAA0900E75D58 /* View+Rotation.swift */; };
+		140F22F42C2EB58F00E75D58 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140F22F32C2EB58F00E75D58 /* SplitView.swift */; };
+		140FC7402C2D8FE7005D35E7 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FC73F2C2D8FE7005D35E7 /* Calculator.swift */; };
+		140FC7432C2D9E14005D35E7 /* Array+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FC7422C2D9E14005D35E7 /* Array+Math.swift */; };
+		140FC7452C2D9E35005D35E7 /* Double+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FC7442C2D9E35005D35E7 /* Double+Round.swift */; };
+		140FC7472C2D9E4B005D35E7 /* String+DoubleFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FC7462C2D9E4B005D35E7 /* String+DoubleFormatting.swift */; };
+		14485C602C37FEE300A74468 /* ProbabilityChartResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C5F2C37FEE300A74468 /* ProbabilityChartResult.swift */; };
+		14485C622C37FEED00A74468 /* DistributionChartResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C612C37FEED00A74468 /* DistributionChartResult.swift */; };
+		14485C642C37FEFD00A74468 /* MatrixEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C632C37FEFD00A74468 /* MatrixEntry.swift */; };
+		14485C662C37FF0900A74468 /* HeatmapChartResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C652C37FF0900A74468 /* HeatmapChartResult.swift */; };
+		14485C682C38003100A74468 /* IndexPath+Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C672C38003100A74468 /* IndexPath+Grid.swift */; };
+		14858E9F2C2C84580087FB93 /* BinEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14858E9E2C2C84580087FB93 /* BinEdge.swift */; };
+		14858EA12C2C84AA0087FB93 /* ColumnAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14858EA02C2C84AA0087FB93 /* ColumnAnalysis.swift */; };
+		14858EA32C2CD3F50087FB93 /* ChartDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14858EA22C2CD3F50087FB93 /* ChartDrawView.swift */; };
+		1499E10E2C2C1F430063B7D8 /* RawDataCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E10D2C2C1F430063B7D8 /* RawDataCollectionView.swift */; };
+		1499E1102C2C1F5D0063B7D8 /* GridCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E10F2C2C1F5D0063B7D8 /* GridCollectionViewLayout.swift */; };
+		1499E1122C2C1FB80063B7D8 /* RawDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1112C2C1FB80063B7D8 /* RawDataCollectionViewCell.swift */; };
+		1499E1222C2C31B60063B7D8 /* SigmaSwiftStatistics in Frameworks */ = {isa = PBXBuildFile; productRef = 1499E1212C2C31B60063B7D8 /* SigmaSwiftStatistics */; };
+		1499E1252C2C31E40063B7D8 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1242C2C31E40063B7D8 /* Math.swift */; };
+		1499E1272C2C32150063B7D8 /* KernelDensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1262C2C32150063B7D8 /* KernelDensity.swift */; };
+		1499E1292C2C32270063B7D8 /* ShapiroWilk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1282C2C32270063B7D8 /* ShapiroWilk.swift */; };
+		1499E1312C2C331D0063B7D8 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1302C2C331D0063B7D8 /* ChartData.swift */; };
+		1499E13A2C2C3DD40063B7D8 /* RealEstateTest.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1499E1392C2C3DD40063B7D8 /* RealEstateTest.csv */; };
+		1499E13D2C2C47F20063B7D8 /* CSVFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E13C2C2C47F20063B7D8 /* CSVFileReader.swift */; };
+		1499E1422C2C4C0E0063B7D8 /* ChartsContainerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1412C2C4C0E0063B7D8 /* ChartsContainerModule.swift */; };
+		1499E1442C2C4C4D0063B7D8 /* ChartsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1432C2C4C4D0063B7D8 /* ChartsContainerView.swift */; };
+		1499E1472C2C59A10063B7D8 /* ChartsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1462C2C59A10063B7D8 /* ChartsModule.swift */; };
+		1499E1492C2C59DF0063B7D8 /* ProbabilityChartModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1482C2C59DF0063B7D8 /* ProbabilityChartModule.swift */; };
+		1499E14B2C2C5E630063B7D8 /* ProbabilityChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E14A2C2C5E630063B7D8 /* ProbabilityChartView.swift */; };
+		1499E14D2C2C5EB50063B7D8 /* DistributionChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E14C2C2C5EB50063B7D8 /* DistributionChartView.swift */; };
+		1499E14F2C2C5EE50063B7D8 /* HeatmapChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E14E2C2C5EE50063B7D8 /* HeatmapChartView.swift */; };
+		1499E1512C2C605C0063B7D8 /* DistributionChartModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1502C2C605C0063B7D8 /* DistributionChartModule.swift */; };
+		1499E1532C2C60A00063B7D8 /* HeatmapChartModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E1522C2C60A00063B7D8 /* HeatmapChartModule.swift */; };
 		14B5A6482C2B3B6500B3EA26 /* CSWisualApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6472C2B3B6500B3EA26 /* CSWisualApp.swift */; };
 		14B5A64A2C2B3B6500B3EA26 /* CSWisualDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6492C2B3B6500B3EA26 /* CSWisualDocument.swift */; };
-		14B5A64C2C2B3B6500B3EA26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A64B2C2B3B6500B3EA26 /* ContentView.swift */; };
+		14B5A64C2C2B3B6500B3EA26 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A64B2C2B3B6500B3EA26 /* AppView.swift */; };
 		14B5A64E2C2B3B6600B3EA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B5A64D2C2B3B6600B3EA26 /* Assets.xcassets */; };
 		14B5A6532C2B3B6600B3EA26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B5A6522C2B3B6600B3EA26 /* Preview Assets.xcassets */; };
 		14B5A65D2C2B3B6600B3EA26 /* CSWisualTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A65C2C2B3B6600B3EA26 /* CSWisualTests.swift */; };
 		14B5A6672C2B3B6600B3EA26 /* CSWisualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6662C2B3B6600B3EA26 /* CSWisualUITests.swift */; };
 		14B5A6692C2B3B6600B3EA26 /* CSWisualUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6682C2B3B6600B3EA26 /* CSWisualUITestsLaunchTests.swift */; };
+		14B5A6772C2B3BFA00B3EA26 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 14B5A6762C2B3BFA00B3EA26 /* ComposableArchitecture */; };
+		14B5A67A2C2B3D8D00B3EA26 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6792C2B3D8D00B3EA26 /* AppModule.swift */; };
+		14B5A67D2C2B420E00B3EA26 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B5A67C2C2B420E00B3EA26 /* MobileCoreServices.framework */; platformFilter = ios; };
+		14B5A67F2C2B42B700B3EA26 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A67E2C2B42B700B3EA26 /* DocumentPicker.swift */; };
+		14B5A6812C2B4F0400B3EA26 /* DocumentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6802C2B4F0400B3EA26 /* DocumentModule.swift */; };
+		14B5A6832C2B4FFC00B3EA26 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5A6822C2B4FFC00B3EA26 /* DocumentView.swift */; };
+		14B5A6882C2B55AB00B3EA26 /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 14B5A6872C2B55AB00B3EA26 /* CSV */; };
+		14B5A68F2C2B5FFD00B3EA26 /* BitcoinTest.csv in Resources */ = {isa = PBXBuildFile; fileRef = 14B5A68E2C2B5FFD00B3EA26 /* BitcoinTest.csv */; };
+		14EBEAF42C3422380011408D /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBEAF32C3422380011408D /* FileReaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +82,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140E7FE52C3568AF00E68335 /* CSVData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVData.swift; sourceTree = "<group>"; };
+		140E7FE72C35691D00E68335 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		140E7FEA2C35697800E68335 /* CSVColumn+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSVColumn+Private.swift"; sourceTree = "<group>"; };
+		140E7FEC2C3569D800E68335 /* ColumnType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnType.swift; sourceTree = "<group>"; };
+		140E7FEE2C3569F400E68335 /* ColumnTypeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnTypeInfo.swift; sourceTree = "<group>"; };
+		140F22F12C2EAA0900E75D58 /* View+Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Rotation.swift"; sourceTree = "<group>"; };
+		140F22F32C2EB58F00E75D58 /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
+		140FC73F2C2D8FE7005D35E7 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		140FC7422C2D9E14005D35E7 /* Array+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Math.swift"; sourceTree = "<group>"; };
+		140FC7442C2D9E35005D35E7 /* Double+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
+		140FC7462C2D9E4B005D35E7 /* String+DoubleFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DoubleFormatting.swift"; sourceTree = "<group>"; };
+		14485C5F2C37FEE300A74468 /* ProbabilityChartResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityChartResult.swift; sourceTree = "<group>"; };
+		14485C612C37FEED00A74468 /* DistributionChartResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionChartResult.swift; sourceTree = "<group>"; };
+		14485C632C37FEFD00A74468 /* MatrixEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixEntry.swift; sourceTree = "<group>"; };
+		14485C652C37FF0900A74468 /* HeatmapChartResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapChartResult.swift; sourceTree = "<group>"; };
+		14485C672C38003100A74468 /* IndexPath+Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+Grid.swift"; sourceTree = "<group>"; };
+		14858E9E2C2C84580087FB93 /* BinEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinEdge.swift; sourceTree = "<group>"; };
+		14858EA02C2C84AA0087FB93 /* ColumnAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnAnalysis.swift; sourceTree = "<group>"; };
+		14858EA22C2CD3F50087FB93 /* ChartDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDrawView.swift; sourceTree = "<group>"; };
+		1499E10D2C2C1F430063B7D8 /* RawDataCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDataCollectionView.swift; sourceTree = "<group>"; };
+		1499E10F2C2C1F5D0063B7D8 /* GridCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewLayout.swift; sourceTree = "<group>"; };
+		1499E1112C2C1FB80063B7D8 /* RawDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDataCollectionViewCell.swift; sourceTree = "<group>"; };
+		1499E1242C2C31E40063B7D8 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		1499E1262C2C32150063B7D8 /* KernelDensity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KernelDensity.swift; sourceTree = "<group>"; };
+		1499E1282C2C32270063B7D8 /* ShapiroWilk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapiroWilk.swift; sourceTree = "<group>"; };
+		1499E1302C2C331D0063B7D8 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		1499E1392C2C3DD40063B7D8 /* RealEstateTest.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RealEstateTest.csv; sourceTree = "<group>"; };
+		1499E13C2C2C47F20063B7D8 /* CSVFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVFileReader.swift; sourceTree = "<group>"; };
+		1499E1412C2C4C0E0063B7D8 /* ChartsContainerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsContainerModule.swift; sourceTree = "<group>"; };
+		1499E1432C2C4C4D0063B7D8 /* ChartsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsContainerView.swift; sourceTree = "<group>"; };
+		1499E1462C2C59A10063B7D8 /* ChartsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsModule.swift; sourceTree = "<group>"; };
+		1499E1482C2C59DF0063B7D8 /* ProbabilityChartModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityChartModule.swift; sourceTree = "<group>"; };
+		1499E14A2C2C5E630063B7D8 /* ProbabilityChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityChartView.swift; sourceTree = "<group>"; };
+		1499E14C2C2C5EB50063B7D8 /* DistributionChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionChartView.swift; sourceTree = "<group>"; };
+		1499E14E2C2C5EE50063B7D8 /* HeatmapChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapChartView.swift; sourceTree = "<group>"; };
+		1499E1502C2C605C0063B7D8 /* DistributionChartModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionChartModule.swift; sourceTree = "<group>"; };
+		1499E1522C2C60A00063B7D8 /* HeatmapChartModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapChartModule.swift; sourceTree = "<group>"; };
 		14B5A6442C2B3B6500B3EA26 /* CSWisual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSWisual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B5A6472C2B3B6500B3EA26 /* CSWisualApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWisualApp.swift; sourceTree = "<group>"; };
 		14B5A6492C2B3B6500B3EA26 /* CSWisualDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWisualDocument.swift; sourceTree = "<group>"; };
-		14B5A64B2C2B3B6500B3EA26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		14B5A64B2C2B3B6500B3EA26 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		14B5A64D2C2B3B6600B3EA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B5A64F2C2B3B6600B3EA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14B5A6502C2B3B6600B3EA26 /* CSWisual.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CSWisual.entitlements; sourceTree = "<group>"; };
@@ -48,6 +132,13 @@
 		14B5A6622C2B3B6600B3EA26 /* CSWisualUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSWisualUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B5A6662C2B3B6600B3EA26 /* CSWisualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWisualUITests.swift; sourceTree = "<group>"; };
 		14B5A6682C2B3B6600B3EA26 /* CSWisualUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWisualUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		14B5A6792C2B3D8D00B3EA26 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		14B5A67C2C2B420E00B3EA26 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		14B5A67E2C2B42B700B3EA26 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
+		14B5A6802C2B4F0400B3EA26 /* DocumentModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModule.swift; sourceTree = "<group>"; };
+		14B5A6822C2B4FFC00B3EA26 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		14B5A68E2C2B5FFD00B3EA26 /* BitcoinTest.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BitcoinTest.csv; sourceTree = "<group>"; };
+		14EBEAF32C3422380011408D /* FileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +146,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B5A6882C2B55AB00B3EA26 /* CSV in Frameworks */,
+				1499E1222C2C31B60063B7D8 /* SigmaSwiftStatistics in Frameworks */,
+				14B5A6772C2B3BFA00B3EA26 /* ComposableArchitecture in Frameworks */,
+				14B5A67D2C2B420E00B3EA26 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +170,149 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140E7FE92C35696600E68335 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				140E7FE52C3568AF00E68335 /* CSVData.swift */,
+				140E7FE72C35691D00E68335 /* Column.swift */,
+				140E7FEA2C35697800E68335 /* CSVColumn+Private.swift */,
+				140E7FEC2C3569D800E68335 /* ColumnType.swift */,
+				140E7FEE2C3569F400E68335 /* ColumnTypeInfo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		140FC7412C2D9E03005D35E7 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				140FC7422C2D9E14005D35E7 /* Array+Math.swift */,
+				140FC7442C2D9E35005D35E7 /* Double+Round.swift */,
+				140FC7462C2D9E4B005D35E7 /* String+DoubleFormatting.swift */,
+				140F22F12C2EAA0900E75D58 /* View+Rotation.swift */,
+				140F22F32C2EB58F00E75D58 /* SplitView.swift */,
+				14485C672C38003100A74468 /* IndexPath+Grid.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		14485C5E2C37FED600A74468 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				14858E9E2C2C84580087FB93 /* BinEdge.swift */,
+				14485C5F2C37FEE300A74468 /* ProbabilityChartResult.swift */,
+				14485C612C37FEED00A74468 /* DistributionChartResult.swift */,
+				14485C652C37FF0900A74468 /* HeatmapChartResult.swift */,
+				14485C632C37FEFD00A74468 /* MatrixEntry.swift */,
+				1499E1302C2C331D0063B7D8 /* ChartData.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		14858E9D2C2C844F0087FB93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14485C5E2C37FED600A74468 /* Chart */,
+				140E7FE92C35696600E68335 /* Data */,
+				14858EA02C2C84AA0087FB93 /* ColumnAnalysis.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1499E10A2C2C1F020063B7D8 /* RawCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1499E10D2C2C1F430063B7D8 /* RawDataCollectionView.swift */,
+				1499E10F2C2C1F5D0063B7D8 /* GridCollectionViewLayout.swift */,
+				1499E1112C2C1FB80063B7D8 /* RawDataCollectionViewCell.swift */,
+			);
+			path = RawCollectionView;
+			sourceTree = "<group>";
+		};
+		1499E1232C2C31DD0063B7D8 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				1499E1242C2C31E40063B7D8 /* Math.swift */,
+				1499E1262C2C32150063B7D8 /* KernelDensity.swift */,
+				1499E1282C2C32270063B7D8 /* ShapiroWilk.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		1499E13B2C2C47D80063B7D8 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				1499E13C2C2C47F20063B7D8 /* CSVFileReader.swift */,
+				140FC73F2C2D8FE7005D35E7 /* Calculator.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		1499E13E2C2C49810063B7D8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				14B5A64B2C2B3B6500B3EA26 /* AppView.swift */,
+				14B5A6792C2B3D8D00B3EA26 /* AppModule.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1499E13F2C2C4B4C0063B7D8 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				14B5A6822C2B4FFC00B3EA26 /* DocumentView.swift */,
+				14B5A6802C2B4F0400B3EA26 /* DocumentModule.swift */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		1499E1402C2C4C050063B7D8 /* ChartsContainer */ = {
+			isa = PBXGroup;
+			children = (
+				1499E1412C2C4C0E0063B7D8 /* ChartsContainerModule.swift */,
+				1499E1432C2C4C4D0063B7D8 /* ChartsContainerView.swift */,
+				14858EA22C2CD3F50087FB93 /* ChartDrawView.swift */,
+			);
+			path = ChartsContainer;
+			sourceTree = "<group>";
+		};
+		1499E1452C2C59940063B7D8 /* ChartModule */ = {
+			isa = PBXGroup;
+			children = (
+				1499E1552C2C60B20063B7D8 /* Probability */,
+				1499E1542C2C60A50063B7D8 /* Distribution */,
+				1499E1562C2C60C10063B7D8 /* Heatmap */,
+				1499E1462C2C59A10063B7D8 /* ChartsModule.swift */,
+			);
+			path = ChartModule;
+			sourceTree = "<group>";
+		};
+		1499E1542C2C60A50063B7D8 /* Distribution */ = {
+			isa = PBXGroup;
+			children = (
+				1499E1502C2C605C0063B7D8 /* DistributionChartModule.swift */,
+				1499E14C2C2C5EB50063B7D8 /* DistributionChartView.swift */,
+			);
+			path = Distribution;
+			sourceTree = "<group>";
+		};
+		1499E1552C2C60B20063B7D8 /* Probability */ = {
+			isa = PBXGroup;
+			children = (
+				1499E1482C2C59DF0063B7D8 /* ProbabilityChartModule.swift */,
+				1499E14A2C2C5E630063B7D8 /* ProbabilityChartView.swift */,
+			);
+			path = Probability;
+			sourceTree = "<group>";
+		};
+		1499E1562C2C60C10063B7D8 /* Heatmap */ = {
+			isa = PBXGroup;
+			children = (
+				1499E14E2C2C5EE50063B7D8 /* HeatmapChartView.swift */,
+				1499E1522C2C60A00063B7D8 /* HeatmapChartModule.swift */,
+			);
+			path = Heatmap;
+			sourceTree = "<group>";
+		};
 		14B5A63B2C2B3B6500B3EA26 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +320,7 @@
 				14B5A65B2C2B3B6600B3EA26 /* CSWisualTests */,
 				14B5A6652C2B3B6600B3EA26 /* CSWisualUITests */,
 				14B5A6452C2B3B6500B3EA26 /* Products */,
+				14B5A67B2C2B420E00B3EA26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,12 +337,17 @@
 		14B5A6462C2B3B6500B3EA26 /* CSWisual */ = {
 			isa = PBXGroup;
 			children = (
+				140FC7412C2D9E03005D35E7 /* Extentions */,
+				14858E9D2C2C844F0087FB93 /* Models */,
+				1499E13B2C2C47D80063B7D8 /* Dependencies */,
+				1499E1232C2C31DD0063B7D8 /* Math */,
+				1499E10A2C2C1F020063B7D8 /* RawCollectionView */,
+				14B5A6782C2B3D8600B3EA26 /* Modules */,
 				14B5A6472C2B3B6500B3EA26 /* CSWisualApp.swift */,
-				14B5A6492C2B3B6500B3EA26 /* CSWisualDocument.swift */,
-				14B5A64B2C2B3B6500B3EA26 /* ContentView.swift */,
 				14B5A64D2C2B3B6600B3EA26 /* Assets.xcassets */,
 				14B5A64F2C2B3B6600B3EA26 /* Info.plist */,
 				14B5A6502C2B3B6600B3EA26 /* CSWisual.entitlements */,
+				14B5A6492C2B3B6500B3EA26 /* CSWisualDocument.swift */,
 				14B5A6512C2B3B6600B3EA26 /* Preview Content */,
 			);
 			path = CSWisual;
@@ -120,7 +364,10 @@
 		14B5A65B2C2B3B6600B3EA26 /* CSWisualTests */ = {
 			isa = PBXGroup;
 			children = (
+				1499E1392C2C3DD40063B7D8 /* RealEstateTest.csv */,
+				14B5A68E2C2B5FFD00B3EA26 /* BitcoinTest.csv */,
 				14B5A65C2C2B3B6600B3EA26 /* CSWisualTests.swift */,
+				14EBEAF32C3422380011408D /* FileReaderTests.swift */,
 			);
 			path = CSWisualTests;
 			sourceTree = "<group>";
@@ -132,6 +379,26 @@
 				14B5A6682C2B3B6600B3EA26 /* CSWisualUITestsLaunchTests.swift */,
 			);
 			path = CSWisualUITests;
+			sourceTree = "<group>";
+		};
+		14B5A6782C2B3D8600B3EA26 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1499E1452C2C59940063B7D8 /* ChartModule */,
+				1499E1402C2C4C050063B7D8 /* ChartsContainer */,
+				1499E13F2C2C4B4C0063B7D8 /* Document */,
+				1499E13E2C2C49810063B7D8 /* App */,
+				14B5A67E2C2B42B700B3EA26 /* DocumentPicker.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		14B5A67B2C2B420E00B3EA26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14B5A67C2C2B420E00B3EA26 /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +417,11 @@
 			dependencies = (
 			);
 			name = CSWisual;
+			packageProductDependencies = (
+				14B5A6762C2B3BFA00B3EA26 /* ComposableArchitecture */,
+				14B5A6872C2B55AB00B3EA26 /* CSV */,
+				1499E1212C2C31B60063B7D8 /* SigmaSwiftStatistics */,
+			);
 			productName = CSWisual;
 			productReference = 14B5A6442C2B3B6500B3EA26 /* CSWisual.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +494,11 @@
 				Base,
 			);
 			mainGroup = 14B5A63B2C2B3B6500B3EA26;
+			packageReferences = (
+				14B5A6752C2B3BFA00B3EA26 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				14B5A6862C2B55AB00B3EA26 /* XCRemoteSwiftPackageReference "CSV.swift" */,
+				1499E1202C2C31B60063B7D8 /* XCRemoteSwiftPackageReference "SigmaSwiftStatistics" */,
+			);
 			productRefGroup = 14B5A6452C2B3B6500B3EA26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,6 +515,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B5A68F2C2B5FFD00B3EA26 /* BitcoinTest.csv in Resources */,
+				1499E13A2C2C3DD40063B7D8 /* RealEstateTest.csv in Resources */,
 				14B5A6532C2B3B6600B3EA26 /* Preview Assets.xcassets in Resources */,
 				14B5A64E2C2B3B6600B3EA26 /* Assets.xcassets in Resources */,
 			);
@@ -265,8 +544,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B5A6482C2B3B6500B3EA26 /* CSWisualApp.swift in Sources */,
+				140E7FED2C3569D800E68335 /* ColumnType.swift in Sources */,
+				1499E1122C2C1FB80063B7D8 /* RawDataCollectionViewCell.swift in Sources */,
+				1499E13D2C2C47F20063B7D8 /* CSVFileReader.swift in Sources */,
+				1499E1292C2C32270063B7D8 /* ShapiroWilk.swift in Sources */,
+				140E7FEB2C35697800E68335 /* CSVColumn+Private.swift in Sources */,
+				14B5A67A2C2B3D8D00B3EA26 /* AppModule.swift in Sources */,
+				140E7FEF2C3569F400E68335 /* ColumnTypeInfo.swift in Sources */,
 				14B5A64A2C2B3B6500B3EA26 /* CSWisualDocument.swift in Sources */,
-				14B5A64C2C2B3B6500B3EA26 /* ContentView.swift in Sources */,
+				14485C642C37FEFD00A74468 /* MatrixEntry.swift in Sources */,
+				14858EA12C2C84AA0087FB93 /* ColumnAnalysis.swift in Sources */,
+				14B5A67F2C2B42B700B3EA26 /* DocumentPicker.swift in Sources */,
+				14B5A6812C2B4F0400B3EA26 /* DocumentModule.swift in Sources */,
+				14858EA32C2CD3F50087FB93 /* ChartDrawView.swift in Sources */,
+				1499E1472C2C59A10063B7D8 /* ChartsModule.swift in Sources */,
+				14B5A64C2C2B3B6500B3EA26 /* AppView.swift in Sources */,
+				14485C682C38003100A74468 /* IndexPath+Grid.swift in Sources */,
+				1499E1532C2C60A00063B7D8 /* HeatmapChartModule.swift in Sources */,
+				14485C602C37FEE300A74468 /* ProbabilityChartResult.swift in Sources */,
+				1499E10E2C2C1F430063B7D8 /* RawDataCollectionView.swift in Sources */,
+				1499E1422C2C4C0E0063B7D8 /* ChartsContainerModule.swift in Sources */,
+				140FC7472C2D9E4B005D35E7 /* String+DoubleFormatting.swift in Sources */,
+				1499E1512C2C605C0063B7D8 /* DistributionChartModule.swift in Sources */,
+				1499E1272C2C32150063B7D8 /* KernelDensity.swift in Sources */,
+				140E7FE62C3568AF00E68335 /* CSVData.swift in Sources */,
+				14B5A6832C2B4FFC00B3EA26 /* DocumentView.swift in Sources */,
+				1499E14B2C2C5E630063B7D8 /* ProbabilityChartView.swift in Sources */,
+				14485C662C37FF0900A74468 /* HeatmapChartResult.swift in Sources */,
+				14858E9F2C2C84580087FB93 /* BinEdge.swift in Sources */,
+				1499E1442C2C4C4D0063B7D8 /* ChartsContainerView.swift in Sources */,
+				140E7FE82C35691D00E68335 /* Column.swift in Sources */,
+				14485C622C37FEED00A74468 /* DistributionChartResult.swift in Sources */,
+				140F22F42C2EB58F00E75D58 /* SplitView.swift in Sources */,
+				140FC7452C2D9E35005D35E7 /* Double+Round.swift in Sources */,
+				140F22F22C2EAA0900E75D58 /* View+Rotation.swift in Sources */,
+				1499E1492C2C59DF0063B7D8 /* ProbabilityChartModule.swift in Sources */,
+				1499E14D2C2C5EB50063B7D8 /* DistributionChartView.swift in Sources */,
+				1499E1102C2C1F5D0063B7D8 /* GridCollectionViewLayout.swift in Sources */,
+				140FC7402C2D8FE7005D35E7 /* Calculator.swift in Sources */,
+				1499E1312C2C331D0063B7D8 /* ChartData.swift in Sources */,
+				140FC7432C2D9E14005D35E7 /* Array+Math.swift in Sources */,
+				1499E14F2C2C5EE50063B7D8 /* HeatmapChartView.swift in Sources */,
+				1499E1252C2C31E40063B7D8 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14EBEAF42C3422380011408D /* FileReaderTests.swift in Sources */,
 				14B5A65D2C2B3B6600B3EA26 /* CSWisualTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +746,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CSWisual/Preview Content\"";
+				DEVELOPMENT_TEAM = EKE54P2FQH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSWisual/Info.plist;
@@ -449,7 +770,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.cihan.CSWisual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,6 +787,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CSWisual/Preview Content\"";
+				DEVELOPMENT_TEAM = EKE54P2FQH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSWisual/Info.plist;
@@ -488,7 +811,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.cihan.CSWisual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,6 +826,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EKE54P2FQH;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -524,6 +849,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EKE54P2FQH;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -545,6 +871,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EKE54P2FQH;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -566,6 +893,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EKE54P2FQH;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -621,6 +949,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1499E1202C2C31B60063B7D8 /* XCRemoteSwiftPackageReference "SigmaSwiftStatistics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/SigmaSwiftStatistics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.2;
+			};
+		};
+		14B5A6752C2B3BFA00B3EA26 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.2;
+			};
+		};
+		14B5A6862C2B55AB00B3EA26 /* XCRemoteSwiftPackageReference "CSV.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaslab/CSV.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1499E1212C2C31B60063B7D8 /* SigmaSwiftStatistics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1499E1202C2C31B60063B7D8 /* XCRemoteSwiftPackageReference "SigmaSwiftStatistics" */;
+			productName = SigmaSwiftStatistics;
+		};
+		14B5A6762C2B3BFA00B3EA26 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14B5A6752C2B3BFA00B3EA26 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		14B5A6872C2B55AB00B3EA26 /* CSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14B5A6862C2B55AB00B3EA26 /* XCRemoteSwiftPackageReference "CSV.swift" */;
+			productName = CSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14B5A63C2C2B3B6500B3EA26 /* Project object */;
 }
