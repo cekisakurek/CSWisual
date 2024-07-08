@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='CSWisualTests.xctest' tests='7' failures='0'>
+  <testsuite name='CSWisualTests.CSWisualTests' tests='2' failures='0'>
+    <testcase classname='CSWisualTests.CSWisualTests' name='testExample' time='0.052'/>
+    <testcase classname='CSWisualTests.CSWisualTests' name='testPerformanceExample' time='1.876'/>
+  </testsuite>
+  <testsuite name='CSWisualTests.FileReaderTests' tests='3' failures='0'>
+    <testcase classname='CSWisualTests.FileReaderTests' name='testBitcoinDateField' time='0.423'/>
+    <testcase classname='CSWisualTests.FileReaderTests' name='testBitcoinDoubleField' time='0.400'/>
+    <testcase classname='CSWisualTests.FileReaderTests' name='testBitcoinIntField' time='0.400'/>
+  </testsuite>
+  <testsuite name='CSWisualTests.RealEstateFileReaderTests' tests='2' failures='0'>
+    <testcase classname='CSWisualTests.RealEstateFileReaderTests' name='testRealEstateStringField' time='2.746'/>
+    <testcase classname='CSWisualTests.RealEstateFileReaderTests' name='testRealEstateUniqueField' time='2.716'/>
+  </testsuite>
+</testsuites>

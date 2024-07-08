@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "07400205-091A-43BE-B8EF-D4ACE2FBE00E",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:CSWisual.xcodeproj",
+      "identifier" : "14B5A6432C2B3B6500B3EA26",
+      "name" : "CSWisual"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CSWisual.xcodeproj",
+        "identifier" : "14B5A6572C2B3B6600B3EA26",
+        "name" : "CSWisualTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CSWisual.xcodeproj",
+        "identifier" : "14B5A6612C2B3B6600B3EA26",
+        "name" : "CSWisualUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

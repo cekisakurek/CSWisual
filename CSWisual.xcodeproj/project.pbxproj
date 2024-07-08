@@ -132,6 +132,7 @@
 		14B5A6802C2B4F0400B3EA26 /* DocumentModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModule.swift; sourceTree = "<group>"; };
 		14B5A6822C2B4FFC00B3EA26 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		14B5A68E2C2B5FFD00B3EA26 /* BitcoinTest.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BitcoinTest.csv; sourceTree = "<group>"; };
+		14BADC482C38488B0054CCB7 /* CSWisual.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CSWisual.xctestplan; sourceTree = "<group>"; };
 		14E311F62C3819C20011FEB9 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		14E311F72C3819C20011FEB9 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		14E311F82C3819C20011FEB9 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
@@ -315,6 +316,7 @@
 		14B5A63B2C2B3B6500B3EA26 = {
 			isa = PBXGroup;
 			children = (
+				14BADC482C38488B0054CCB7 /* CSWisual.xctestplan */,
 				14E311F52C3819AE0011FEB9 /* Screenshots */,
 				14B5A6462C2B3B6500B3EA26 /* CSWisual */,
 				14B5A65B2C2B3B6600B3EA26 /* CSWisualTests */,
