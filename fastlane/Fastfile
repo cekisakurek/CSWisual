@@ -23,5 +23,5 @@ platform :ios do
 end
 
 lane :tests do
-  run_tests(scheme: "CSWisual")
+  run_tests(scheme: "CSWisual", xcodebuild_command: "env NSUnbufferedIO=YES xcodebuild -skipMacroValidation")
 end
