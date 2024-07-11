@@ -16,8 +16,9 @@ struct ChartsContainerView: View {
         NavigationSplitView(
             sidebar: {
                 List(store.columns, id: \.name, selection: $store.selectedHeaders) {
-                    Text("\($0.name) \(String($0.isNumber)) (\($0.type.rawValue))")
+                    Text("\($0.name) (\($0.type.rawValue.capitalized))")
                         .selectionDisabled(!$0.isNumber)
+                        .foregroundColor($0.isNumber ? .black : .gray)
                 }
                 .navigationTitle("Columns")
                 .toolbar {
