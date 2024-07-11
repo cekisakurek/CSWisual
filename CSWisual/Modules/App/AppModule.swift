@@ -18,20 +18,21 @@ struct AppModule {
         var readingFile: Bool = false
         var documentState: DocumentModule.State?
         let id: UUID
-        var fileURL: URL?
+        var openFileURL: URL?
 
+        var title: String = "CSWisual"
         init(
             showDocumentPicker: Bool = false,
             readingFile: Bool = false,
             documentState: DocumentModule.State? = nil,
             id: UUID = UUID(),
-            fileURL: URL? = nil
+            openFileURL: URL? = nil
         ) {
             self.showDocumentPicker = showDocumentPicker
             self.readingFile = readingFile
             self.documentState = documentState
             self.id = id
-            self.fileURL = fileURL
+            self.openFileURL = openFileURL
         }
     }
 
@@ -56,7 +57,7 @@ struct AppModule {
         Reduce { state, action in
             switch action {
             case .appDidLaunched:
-                return .run { [fileURL = state.fileURL] send in
+                return .run { [fileURL = state.openFileURL] send in
                     if let fileURL {
                         await send(.openFile(.success(fileURL)))
                     }
@@ -83,6 +84,8 @@ struct AppModule {
             case .documentAction:
                 return .none
             case .fileOpenResult(.success(let data)):
+                state.title = data.url.lastPathComponent
+                print(state.title)
                 state.readingFile = false
                 state.documentState = DocumentModule.State(data: data)
                 return .none

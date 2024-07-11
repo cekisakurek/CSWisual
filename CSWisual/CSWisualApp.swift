@@ -22,7 +22,7 @@ struct CSWisualApp: App {
                     )
                 )
                 .onOpenURL {
-                    openWindow(value: AppModule.State(fileURL: $0))
+                    openWindow(value: AppModule.State(openFileURL: $0))
                 }
             },
             defaultValue: { AppModule.State() })

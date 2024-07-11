@@ -35,6 +35,7 @@ struct AppView: View {
         .task {
             store.send(.appDidLaunched)
         }
+        .navigationTitle($store.title)
     }
 }
 
