@@ -14,7 +14,7 @@ struct DocumentModule {
 
     // MARK: - State
     @ObservableState
-    struct State: Equatable {
+    struct State: Equatable, Codable, Hashable {
         let data: CSVData
         var chartContainerState: ChartsContainerModule.State
         init(data: CSVData) {

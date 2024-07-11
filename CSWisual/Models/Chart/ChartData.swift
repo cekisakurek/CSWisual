@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct ChartData: Identifiable, Equatable {
+struct ChartData: Identifiable, Equatable, Codable, Hashable {
 
-    let id = UUID()
+    let id: UUID
     let name: String
 
     let minX: Double
@@ -25,7 +25,8 @@ struct ChartData: Identifiable, Equatable {
 
     let defaultAxisValues: [Double]
 
-    init(name: String, entries: [Entry]) {
+    init(name: String, entries: [Entry], id: UUID = UUID()) {
+        self.id = id
         self.entries = entries
 
         self.minX = entries.min(by: { $0.xValue < $1.xValue }).map({ $0.xValue }) ?? Double.greatestFiniteMagnitude
@@ -43,7 +44,7 @@ struct ChartData: Identifiable, Equatable {
         self.name = name
     }
 
-    struct Entry: Identifiable, Equatable {
+    struct Entry: Identifiable, Equatable, Codable, Hashable {
         let xValue: Double
         let yValue: Double
         var id: String { "\(xValue)-\(yValue)" }

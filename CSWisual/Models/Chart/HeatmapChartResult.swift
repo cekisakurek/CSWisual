@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HeatmapChartResult: Equatable {
+struct HeatmapChartResult: Equatable, Codable, Hashable {
     let data: [MatrixEntry]
     let labels: [String]
 }

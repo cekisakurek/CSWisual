@@ -9,14 +9,17 @@ import SwiftUI
 import ComposableArchitecture
 @main
 struct CSWisualApp: App {
+
     var body: some Scene {
-        WindowGroup {
-            AppView(
-                store: Store(
-                    initialState: AppModule.State(),
-                    reducer: { AppModule() }
+        WindowGroup(
+            content: {
+                AppView(
+                    store: Store(
+                        initialState: $0.wrappedValue,
+                        reducer: { AppModule() }
+                    )
                 )
-            )
-        }
+            },
+            defaultValue: { AppModule.State() })
     }
 }

@@ -13,16 +13,21 @@ struct DistributionChartModule {
 
     // MARK: - State
     @ObservableState
-    struct State: Equatable, Identifiable {
+    struct State: Equatable, Identifiable, Codable, Hashable {
         let data: CSVData.Column
 
         var histogram: ChartData?
         var frequencies: ChartData?
         var normal: ChartData?
-        // TODO: make width variable
+        // TODO: make width variable depending on the size of the screen
         var width: Double = 10
 
-        let id = UUID()
+        let id: UUID
+
+        init(data: CSVData.Column, id: UUID = UUID()) {
+            self.data = data
+            self.id = id
+        }
 
         var minXScale: Double {
             return min(normal?.minX ?? 0.0, frequencies?.minX ?? 0.0)
@@ -30,10 +35,6 @@ struct DistributionChartModule {
 
         var maxXScale: Double {
             return max(normal?.maxX ?? 0.0, frequencies?.maxX ?? 0.0)
-        }
-
-        init(data: CSVData.Column) {
-            self.data = data
         }
     }
 

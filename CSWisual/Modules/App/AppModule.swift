@@ -13,10 +13,23 @@ struct AppModule {
 
     // MARK: - State
     @ObservableState
-    struct State: Equatable {
+    struct State: Equatable, Identifiable, Codable, Hashable {
         var showDocumentPicker: Bool = false
         var readingFile: Bool = false
         var documentState: DocumentModule.State?
+        let id: UUID
+
+        init(
+            showDocumentPicker: Bool = false,
+            readingFile: Bool = false,
+            documentState: DocumentModule.State? = nil,
+            id: UUID = UUID()
+        ) {
+            self.showDocumentPicker = showDocumentPicker
+            self.readingFile = readingFile
+            self.documentState = documentState
+            self.id = id
+        }
     }
 
     // MARK: - Actions

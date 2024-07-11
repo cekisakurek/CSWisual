@@ -8,7 +8,7 @@
 import Foundation
 
 extension CSVData.Column {
-    struct TypeInfo: Equatable {
+    struct TypeInfo: Equatable, Codable, Hashable {
         let unknownTypeCount: Int
         let intTypeCount: Int
         let doubleTypeCount: Int

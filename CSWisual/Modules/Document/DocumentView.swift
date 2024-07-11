@@ -33,7 +33,8 @@ struct DocumentView: View {
                 data: .init(
                     raw: [],
                     headers: [],
-                    columns: [])
+                    columns: [],
+                    url: Bundle.main.url(forResource: "BitcoinTest", withExtension: "csv")!)
             ),
             reducer: { DocumentModule() }
         )

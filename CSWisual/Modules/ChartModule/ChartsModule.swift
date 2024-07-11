@@ -13,7 +13,7 @@ struct ChartsModule {
 
     // MARK: - State
     @ObservableState
-    enum State: Equatable, Identifiable {
+    enum State: Equatable, Identifiable, Codable, Hashable {
         case probability(ProbabilityChartModule.State)
         case distrubution(DistributionChartModule.State)
         case heatmap(HeatmapChartModule.State)

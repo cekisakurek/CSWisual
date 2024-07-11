@@ -13,16 +13,17 @@ struct ProbabilityChartModule {
 
     // MARK: - State
     @ObservableState
-    struct State: Equatable, Identifiable {
+    struct State: Equatable, Identifiable, Codable, Hashable {
         let data: CSVData.Column
         var probabilities: ChartData?
         var normal: ChartData?
+        let id: UUID
 
-        init(data: CSVData.Column) {
+        init(data: CSVData.Column, id: UUID = UUID()) {
+            self.id = id
             self.data = data
         }
 
-        let id = UUID()
     }
 
     // MARK: - Actions

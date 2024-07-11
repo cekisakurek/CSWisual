@@ -13,14 +13,15 @@ struct HeatmapChartModule {
 
     // MARK: - State
     @ObservableState
-    struct State: Equatable, Identifiable {
+    struct State: Equatable, Identifiable, Codable, Hashable {
         let columns: [CSVData.Column]
         let headers: [String]
         var heatmap: HeatmapChartResult?
 
-        let id = UUID()
+        let id: UUID
 
-        init(columns: [CSVData.Column]) {
+        init(columns: [CSVData.Column], id: UUID = UUID()) {
+            self.id = id
             self.columns = columns
             self.headers = columns.map({ $0.name })
 

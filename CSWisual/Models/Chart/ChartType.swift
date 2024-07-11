@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ChartType: String, CaseIterable, Identifiable {
+enum ChartType: String, CaseIterable, Identifiable, Codable, Hashable {
     case probability
     case distribution
     case heatmap

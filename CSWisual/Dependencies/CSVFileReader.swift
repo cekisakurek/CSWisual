@@ -39,7 +39,7 @@ extension CSVFileReader: DependencyKey {
             return column
         }
 
-        return CSVData(raw: raw, headers: reader.headerRow ?? [], columns: parsed ?? [])
+        return CSVData(raw: raw, headers: reader.headerRow ?? [], columns: parsed ?? [], url: url)
     }
 
     static var testValue: CSVFileReader = Self(
@@ -65,7 +65,7 @@ extension CSVFileReader: DependencyKey {
                 return column
             }
 
-            return CSVData(raw: raw, headers: reader.headerRow ?? [], columns: parsed ?? [])
+            return CSVData(raw: raw, headers: reader.headerRow ?? [], columns: parsed ?? [], url: url)
         }
     )
 }

@@ -13,7 +13,7 @@ struct ChartsContainerModule {
 
     // MARK: - State
     @ObservableState
-    struct State: Equatable {
+    struct State: Equatable, Codable, Hashable {
         let columns: [CSVData.Column]
         var selectedHeaders: Set<String>
         var chartType: ChartType = .probability

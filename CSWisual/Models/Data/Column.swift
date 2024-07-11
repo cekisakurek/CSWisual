@@ -9,7 +9,7 @@ import Foundation
 
 extension CSVData {
 
-    struct Column: Equatable {
+    struct Column: Equatable, Codable, Hashable {
         let name: String
         let data: [String]
         let info: TypeInfo

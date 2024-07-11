@@ -8,7 +8,7 @@
 import Foundation
 
 extension CSVData.Column {
-    enum ColumnType: String, Equatable {
+    enum ColumnType: String, Equatable, Codable, Hashable {
         case id
         case string
         case int
