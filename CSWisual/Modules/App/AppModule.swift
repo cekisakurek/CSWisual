@@ -18,17 +18,20 @@ struct AppModule {
         var readingFile: Bool = false
         var documentState: DocumentModule.State?
         let id: UUID
+        var fileURL: URL?
 
         init(
             showDocumentPicker: Bool = false,
             readingFile: Bool = false,
             documentState: DocumentModule.State? = nil,
-            id: UUID = UUID()
+            id: UUID = UUID(),
+            fileURL: URL? = nil
         ) {
             self.showDocumentPicker = showDocumentPicker
             self.readingFile = readingFile
             self.documentState = documentState
             self.id = id
+            self.fileURL = fileURL
         }
     }
 
@@ -53,7 +56,11 @@ struct AppModule {
         Reduce { state, action in
             switch action {
             case .appDidLaunched:
-                return .none
+                return .run { [fileURL = state.fileURL] send in
+                    if let fileURL {
+                        await send(.openFile(.success(fileURL)))
+                    }
+                }
             case .showDocumentPicker:
                 state.showDocumentPicker = true
                 return .none

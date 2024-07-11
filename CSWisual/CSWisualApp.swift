@@ -10,6 +10,8 @@ import ComposableArchitecture
 @main
 struct CSWisualApp: App {
 
+    @Environment(\.openWindow) private var openWindow
+
     var body: some Scene {
         WindowGroup(
             content: {
@@ -19,6 +21,9 @@ struct CSWisualApp: App {
                         reducer: { AppModule() }
                     )
                 )
+                .onOpenURL {
+                    openWindow(value: AppModule.State(fileURL: $0))
+                }
             },
             defaultValue: { AppModule.State() })
     }
