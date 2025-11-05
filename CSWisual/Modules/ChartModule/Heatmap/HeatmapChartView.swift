@@ -58,6 +58,11 @@ struct HeatmapChartView: View {
                 }
                 .chartForegroundStyleScale(range: Gradient(colors: gradientColors))
                 .aspectRatio(1, contentMode: .fit)
+            } else if store.errors.count > 0 {
+                ForEach(store.errors, id: \.self) { error in
+                    Text(error)
+                }
+                
             } else {
                 ProgressView()
             }

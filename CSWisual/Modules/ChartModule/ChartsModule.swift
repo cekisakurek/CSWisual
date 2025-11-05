@@ -17,15 +17,18 @@ struct ChartsModule {
         case probability(ProbabilityChartModule.State)
         case distrubution(DistributionChartModule.State)
         case heatmap(HeatmapChartModule.State)
+        case stats(StatsChartModule.State)
 
-        var id: String {
+        var id: UUID {
             switch self {
             case .probability(let state):
-                return state.id.uuidString
+                return state.id
             case .distrubution(let state):
-                return state.id.uuidString
+                return state.id
             case .heatmap(let state):
-                return state.id.uuidString
+                return state.id
+            case .stats(let state):
+                return state.id
             }
         }
 
@@ -37,6 +40,8 @@ struct ChartsModule {
                 return state.data.name
             case .heatmap:
                 return "heatmap"
+            case .stats(let state):
+                return state.data.name
             }
         }
     }
@@ -46,6 +51,7 @@ struct ChartsModule {
         case probability(ProbabilityChartModule.Action)
         case distrubution(DistributionChartModule.Action)
         case heatmap(HeatmapChartModule.Action)
+        case stats(StatsChartModule.Action)
     }
 
     // MARK: - Dependencies
@@ -60,6 +66,9 @@ struct ChartsModule {
         }
         Scope(state: \.heatmap, action: \.heatmap) {
             HeatmapChartModule()
+        }
+        Scope(state: \.stats, action: \.stats) {
+            StatsChartModule()
         }
     }
 }

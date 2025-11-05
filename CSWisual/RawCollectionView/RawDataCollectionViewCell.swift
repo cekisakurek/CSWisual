@@ -20,19 +20,9 @@ class RawDataCollectionViewCell: UICollectionViewCell {
 
         super.init(frame: frame)
 
-        self.contentView.layer.borderColor = UIColor.black.cgColor
+        
         self.contentView.layer.borderWidth = 1.0
 
-        // TODO: implement dark/light theme
-        if #available(iOS 13.0, *) {
-            if self.traitCollection.userInterfaceStyle == .dark {
-                self.label.textColor = UIColor.black
-            } else {
-                self.label.textColor = UIColor.black
-            }
-        } else {
-            self.label.textColor = UIColor.white
-        }
         self.contentView.addSubview(self.label)
 
         NSLayoutConstraint.activate([
@@ -41,6 +31,18 @@ class RawDataCollectionViewCell: UICollectionViewCell {
             self.label.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
             self.label.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
         ])
+    }
+    
+    func setBorderColor(_ color: UIColor) {
+        self.contentView.layer.borderColor = color.cgColor
+    }
+    
+    func setCellLabelColor(_ color: UIColor) {
+        self.label.textColor = color
+    }
+    
+    func setCellLabelFont(_ font: UIFont) {
+        self.label.font = font
     }
 
     func setString(string: String?) {

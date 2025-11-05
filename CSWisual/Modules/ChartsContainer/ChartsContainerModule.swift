@@ -16,7 +16,7 @@ struct ChartsContainerModule {
     struct State: Equatable, Codable, Hashable {
         let columns: [CSVData.Column]
         var selectedHeaders: Set<String>
-        var chartType: ChartType = .probability
+        var chartType: ChartType = .stats
         var charts: IdentifiedArrayOf<ChartsModule.State> = []
         let headers: [String]
 
@@ -78,6 +78,15 @@ struct ChartsContainerModule {
                                 columns: state.columns.filter({ state.selectedHeaders.contains($0.name) }))
                             )
                         ]
+                    )
+                    return .none
+                case .stats:
+                    state.charts = IdentifiedArray(
+                        uniqueElements: state.selectedHeaders.map { name in
+                            .stats(StatsChartModule.State(
+                                data: state.columns.first(where: { $0.name == name })!)
+                            )
+                        }
                     )
                     return .none
                 }

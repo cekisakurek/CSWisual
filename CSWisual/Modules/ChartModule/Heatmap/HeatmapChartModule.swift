@@ -17,6 +17,8 @@ struct HeatmapChartModule {
         let columns: [CSVData.Column]
         let headers: [String]
         var heatmap: HeatmapChartResult?
+        
+        var errors: [String] = []
 
         let id: UUID
 
@@ -57,6 +59,12 @@ struct HeatmapChartModule {
             case .calculationComplete(.failure(let error)):
                 // TODO: Show alert
                 print(error)
+                switch error {
+                case CalculatorError.heatmapPleaseSelectMoreColumns:
+                    state.errors.append("Please select more than one column!")
+                default:
+                    state.errors.append(error.localizedDescription)
+                }
                 state.heatmap = nil
                 return .none
             }

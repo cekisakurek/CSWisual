@@ -12,6 +12,11 @@ struct Calculator {
     let probabilityResult: (CSVData.Column) async throws -> ProbabilityChartResult
     let distributionResult: (CSVData.Column) async throws -> DistributionChartResult
     let heatmapResult: ([CSVData.Column]) async throws -> HeatmapChartResult
+    let statsResult: (CSVData.Column) async throws -> StatsChartResult
+}
+
+enum CalculatorError: Swift.Error {
+    case heatmapPleaseSelectMoreColumns
 }
 
 extension Calculator: DependencyKey {
@@ -39,7 +44,7 @@ extension Calculator: DependencyKey {
             let numbers = csv.asDouble()
             let distribution = numbers.probabilityDistribution()
 
-            let frequencies = numbers.frequencies()
+            let density = numbers.density()
 
             let binEdges = numbers.binEdges()
 
@@ -51,25 +56,30 @@ extension Calculator: DependencyKey {
                 )
             })
 
-            let frequencyEntries = frequencies
+            let densityEntries = density
                 .sorted(by: { $0.key < $1.key })
                 .map(ChartData.Entry.init)
 
             let (bValue, mValue) = leastSquaresRegression(distribution)
             let normalFrequencyEntries = distribution
                 .map({ xValue, _ in (mValue * xValue) + bValue })
-                .frequencies()
+                .density()
                 .sorted(by: { $0.key < $1.key })
                 .map(ChartData.Entry.init)
 
             return DistributionChartResult(
                 histogram: .init(name: "Histogram", entries: histogramEntries),
-                frequency: .init(name: "Frequency", entries: frequencyEntries),
+                frequency: .init(name: "Density", entries: densityEntries),
                 normal: .init(name: "Normal Frequency", entries: normalFrequencyEntries)
             )
         },
         heatmapResult: { columns in
 
+            guard columns.count > 1
+            else {
+                throw CalculatorError.heatmapPleaseSelectMoreColumns
+            }
+            
             let labels = columns.map({ $0.name })
 
             let matrixEntries = columns.enumerated().flatMap { columnIndex, column in
@@ -97,6 +107,42 @@ extension Calculator: DependencyKey {
                 labels: labels
             )
             return result
+        },
+        statsResult: { csv in
+            let data = csv.asDouble()
+            var wVal = 0.0
+            var pVal = 0.0
+            var gaussian = NSLocalizedString("No", comment: "")
+            let arr = data.sorted()
+            let (wValue, pValue, error) = CSWisual.swilk(x: arr)
+            if error == .noError {
+                if pValue > 0.05 {
+                    gaussian = NSLocalizedString("Yes", comment: "")
+                }
+                wVal = wValue
+                pVal = pValue
+            }
+            let result = StatsChartResult(
+                coefficientOfVariation: Sigma.coefficientOfVariationSample(data),
+                variance: Sigma.varianceSample(data),
+                mean: Sigma.average(data),
+                std: Sigma.standardDeviationSample(data),
+                min: Sigma.min(data),
+                twoFivePercentile: Sigma.percentile(data, percentile: 0.25),
+                fiveZeroPercentile: Sigma.percentile(data, percentile: 0.5),
+                sevenFivePercentile: Sigma.percentile(data, percentile: 0.75),
+                max: Sigma.max(data),
+                kurtosisA: Sigma.kurtosisA(data),
+                kurtosisB: Sigma.kurtosisB(data),
+                skewnessA: Sigma.skewnessA(data),
+                skewnessB: Sigma.skewnessB(data),
+                swilkP: pVal,
+                swilkW: wVal,
+                isGaussian: gaussian,
+                median: Sigma.median(data),
+                stdErrorOfMean: Sigma.standardErrorOfTheMean(data)
+            )
+            return result
         }
     )
 }
@@ -107,3 +153,5 @@ extension DependencyValues {
         set { self[Calculator.self] = newValue }
     }
 }
+
+

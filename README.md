@@ -44,3 +44,10 @@ This project is licensed under [GPL](https://github.com/cekisakurek/CSWisual/blo
 ## :man_astronaut: Show your support
 
 Give a ⭐️ if this project helped you!
+
+## Roadmap
+- Add Darkmode Support
+- Add Printing Support
+- Add Calculator Caching
+- CSV import options
+

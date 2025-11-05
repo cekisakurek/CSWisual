@@ -22,6 +22,7 @@
 		14485C642C37FEFD00A74468 /* MatrixEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C632C37FEFD00A74468 /* MatrixEntry.swift */; };
 		14485C662C37FF0900A74468 /* HeatmapChartResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C652C37FF0900A74468 /* HeatmapChartResult.swift */; };
 		14485C682C38003100A74468 /* IndexPath+Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14485C672C38003100A74468 /* IndexPath+Grid.swift */; };
+		14835DB02C4016720066CC94 /* ItemPrintPageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14835DAF2C4016720066CC94 /* ItemPrintPageRenderer.swift */; };
 		14858E9F2C2C84580087FB93 /* BinEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14858E9E2C2C84580087FB93 /* BinEdge.swift */; };
 		14858EA32C2CD3F50087FB93 /* ChartDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14858EA22C2CD3F50087FB93 /* ChartDrawView.swift */; };
 		1499E10E2C2C1F430063B7D8 /* RawDataCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1499E10D2C2C1F430063B7D8 /* RawDataCollectionView.swift */; };
@@ -60,6 +61,9 @@
 		14E311FF2C3820290011FEB9 /* ChartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E311FE2C3820290011FEB9 /* ChartType.swift */; };
 		14E312012C3828490011FEB9 /* RealEstateFileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E312002C3828490011FEB9 /* RealEstateFileReaderTests.swift */; };
 		14EBEAF42C3422380011408D /* BitcoinDataFileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBEAF32C3422380011408D /* BitcoinDataFileReaderTests.swift */; };
+		14F528082C45288300505512 /* StatsChartModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F528072C45288300505512 /* StatsChartModule.swift */; };
+		14F5280A2C45292900505512 /* StatsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F528092C45292900505512 /* StatsChartView.swift */; };
+		14F5280C2C452AF900505512 /* StatsChartResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5280B2C452AF900505512 /* StatsChartResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,7 @@
 		14485C632C37FEFD00A74468 /* MatrixEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixEntry.swift; sourceTree = "<group>"; };
 		14485C652C37FF0900A74468 /* HeatmapChartResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapChartResult.swift; sourceTree = "<group>"; };
 		14485C672C38003100A74468 /* IndexPath+Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+Grid.swift"; sourceTree = "<group>"; };
+		14835DAF2C4016720066CC94 /* ItemPrintPageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPrintPageRenderer.swift; sourceTree = "<group>"; };
 		14858E9E2C2C84580087FB93 /* BinEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinEdge.swift; sourceTree = "<group>"; };
 		14858EA22C2CD3F50087FB93 /* ChartDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDrawView.swift; sourceTree = "<group>"; };
 		1499E10D2C2C1F430063B7D8 /* RawDataCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDataCollectionView.swift; sourceTree = "<group>"; };
@@ -140,6 +145,9 @@
 		14E311FE2C3820290011FEB9 /* ChartType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartType.swift; sourceTree = "<group>"; };
 		14E312002C3828490011FEB9 /* RealEstateFileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateFileReaderTests.swift; sourceTree = "<group>"; };
 		14EBEAF32C3422380011408D /* BitcoinDataFileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinDataFileReaderTests.swift; sourceTree = "<group>"; };
+		14F528072C45288300505512 /* StatsChartModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsChartModule.swift; sourceTree = "<group>"; };
+		14F528092C45292900505512 /* StatsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsChartView.swift; sourceTree = "<group>"; };
+		14F5280B2C452AF900505512 /* StatsChartResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsChartResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +213,7 @@
 				14485C632C37FEFD00A74468 /* MatrixEntry.swift */,
 				1499E1302C2C331D0063B7D8 /* ChartData.swift */,
 				14E311FE2C3820290011FEB9 /* ChartType.swift */,
+				14F5280B2C452AF900505512 /* StatsChartResult.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -278,6 +287,7 @@
 		1499E1452C2C59940063B7D8 /* ChartModule */ = {
 			isa = PBXGroup;
 			children = (
+				14F528062C45287700505512 /* Stats */,
 				1499E1552C2C60B20063B7D8 /* Probability */,
 				1499E1542C2C60A50063B7D8 /* Distribution */,
 				1499E1562C2C60C10063B7D8 /* Heatmap */,
@@ -350,6 +360,7 @@
 				14B5A64F2C2B3B6600B3EA26 /* Info.plist */,
 				14B5A6502C2B3B6600B3EA26 /* CSWisual.entitlements */,
 				14B5A6512C2B3B6600B3EA26 /* Preview Content */,
+				14835DAF2C4016720066CC94 /* ItemPrintPageRenderer.swift */,
 			);
 			path = CSWisual;
 			sourceTree = "<group>";
@@ -411,6 +422,15 @@
 				14E311F82C3819C20011FEB9 /* 4.png */,
 			);
 			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		14F528062C45287700505512 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				14F528072C45288300505512 /* StatsChartModule.swift */,
+				14F528092C45292900505512 /* StatsChartView.swift */,
+			);
+			path = Stats;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,7 +589,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -578,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F5280A2C45292900505512 /* StatsChartView.swift in Sources */,
 				14B5A6482C2B3B6500B3EA26 /* CSWisualApp.swift in Sources */,
 				140E7FED2C3569D800E68335 /* ColumnType.swift in Sources */,
 				1499E1122C2C1FB80063B7D8 /* RawDataCollectionViewCell.swift in Sources */,
@@ -602,11 +624,14 @@
 				140E7FE62C3568AF00E68335 /* CSVData.swift in Sources */,
 				14B5A6832C2B4FFC00B3EA26 /* DocumentView.swift in Sources */,
 				1499E14B2C2C5E630063B7D8 /* ProbabilityChartView.swift in Sources */,
+				14F5280C2C452AF900505512 /* StatsChartResult.swift in Sources */,
 				14485C662C37FF0900A74468 /* HeatmapChartResult.swift in Sources */,
 				14858E9F2C2C84580087FB93 /* BinEdge.swift in Sources */,
 				1499E1442C2C4C4D0063B7D8 /* ChartsContainerView.swift in Sources */,
 				140E7FE82C35691D00E68335 /* Column.swift in Sources */,
+				14F528082C45288300505512 /* StatsChartModule.swift in Sources */,
 				14485C622C37FEED00A74468 /* DistributionChartResult.swift in Sources */,
+				14835DB02C4016720066CC94 /* ItemPrintPageRenderer.swift in Sources */,
 				14E311FF2C3820290011FEB9 /* ChartType.swift in Sources */,
 				140FC7452C2D9E35005D35E7 /* Double+Round.swift in Sources */,
 				140F22F22C2EAA0900E75D58 /* View+Rotation.swift in Sources */,
@@ -776,10 +801,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CSWisual/CSWisual.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CSWisual/Preview Content\"";
-				DEVELOPMENT_TEAM = EKE54P2FQH;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSWisual/Info.plist;
@@ -818,10 +844,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CSWisual/CSWisual.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CSWisual/Preview Content\"";
-				DEVELOPMENT_TEAM = EKE54P2FQH;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CSWisual/Info.plist;

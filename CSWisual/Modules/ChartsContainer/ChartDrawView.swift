@@ -31,6 +31,10 @@ struct ChartDrawView: View {
         case .heatmap:
             if let store = store.scope(state: \.heatmap, action: \.heatmap) {
                 HeatmapChartView(store: store)
+            }
+        case .stats:
+            if let store = store.scope(state: \.stats, action: \.stats) {
+                StatsChartView(store: store)
                     .onAppear {
                         store.send(.calculate)
                     }

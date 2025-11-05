@@ -20,21 +20,31 @@ struct RawAnalysisCollectionView: UIViewRepresentable {
     let sectionInset: UIEdgeInsets
     var backgroundColor: UIColor
 
-    var cellColor: UIColor = UIColor.white
-    var cellColorAlt: UIColor = UIColor(red: 210.0/255.0, green: 210.0/255.0, blue: 210.0/255.0, alpha: 1.0)
+    var cellBackgroundColor: UIColor
+    var cellLabelColor: UIColor
+    var cellBorderColor: UIColor
+    var headerColor: UIColor
 
     init(
         rows: [[String]],
         headers: [String],
         itemSize: CGSize = CGSize(width: 100.0, height: 50.0),
         sectionInset: UIEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10),
-        backgroundColor: UIColor = .white
+        backgroundColor: UIColor = .white,
+        cellBackgroundColor: UIColor = .white,
+        cellLabelColor: UIColor = .black,
+        cellBorderColor: UIColor = .black,
+        headerColor: UIColor = UIColor(red: 210.0/255.0, green: 210.0/255.0, blue: 210.0/255.0, alpha: 1.0)
     ) {
         self.rows = rows
         self.headers = headers
         self.itemSize = itemSize
         self.sectionInset = sectionInset
         self.backgroundColor = backgroundColor
+        self.cellBackgroundColor = cellBackgroundColor
+        self.cellLabelColor = cellLabelColor
+        self.cellBorderColor = cellBorderColor
+        self.headerColor = headerColor
     }
 
     func makeUIView(context: Context) -> UICollectionView {
@@ -58,26 +68,34 @@ struct RawAnalysisCollectionView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UICollectionView, context: Context) {
-        context.coordinator.cellColor = self.cellColor
-        context.coordinator.cellColorAlt = self.cellColorAlt
+        context.coordinator.cellBackgroundColor = self.cellBackgroundColor
+        context.coordinator.cellLabelColor = self.cellLabelColor
+        context.coordinator.headerColor = self.headerColor
+        context.coordinator.cellBorderColor = self.cellBorderColor
+        
     }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(rows: rows, headers: headers, cellColor: cellColor, cellColorAlt: cellColorAlt)
+        Coordinator(rows: rows, headers: headers, cellBackgroundColor: cellBackgroundColor, cellLabelColor: cellLabelColor, cellBorderColor: cellBorderColor, headerColor: headerColor)
     }
 
     class Coordinator: NSObject, UICollectionViewDataSource {
         let rows: [[String]]
         let headers: [String]
 
-        var cellColor: UIColor
-        var cellColorAlt: UIColor
+        var cellBackgroundColor: UIColor
+        var cellLabelColor: UIColor
+        var cellBorderColor: UIColor
+        var headerColor: UIColor
 
-        init(rows: [[String]], headers: [String], cellColor: UIColor, cellColorAlt: UIColor) {
+        init(rows: [[String]], headers: [String], cellBackgroundColor: UIColor, cellLabelColor: UIColor, cellBorderColor: UIColor, headerColor: UIColor) {
             self.rows = rows
             self.headers = headers
-            self.cellColor = cellColor
-            self.cellColorAlt = cellColorAlt
+            self.cellBackgroundColor = cellBackgroundColor
+            self.headerColor = headerColor
+            
+            self.cellLabelColor = cellLabelColor
+            self.cellBorderColor = cellBorderColor
         }
 
         func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -97,28 +115,28 @@ struct RawAnalysisCollectionView: UIViewRepresentable {
             ) as? RawDataCollectionViewCell
             else { return UICollectionViewCell() }
 
-            cell.backgroundColor = self.cellColor
-
+            
+            cell.setBorderColor(self.cellBorderColor)
+            cell.setCellLabelColor(self.cellLabelColor)
             if indexPath.column == 0 {
-                cell.backgroundColor = UIColor(
-                    red: CGFloat(210.0/255.0),
-                    green: CGFloat(210.0/255.0),
-                    blue: CGFloat(210.0/255.0),
-                    alpha: 1.0
-                )
+                cell.backgroundColor = self.headerColor
+                cell.setCellLabelFont(UIFont.boldSystemFont(ofSize: 16))
                 if indexPath.row > 0 {
                     cell.setString(string: String(indexPath.row))
                 } else {
-                    cell.setString(string: NSLocalizedString("Row / Header", comment: ""))
+                    cell.setString(string: "")
                 }
                 return cell
             }
 
             if indexPath.row == 0 {
                 cell.setString(string: headers[indexPath.column - 1])
-                cell.backgroundColor = self.cellColorAlt
+                cell.backgroundColor = self.headerColor
+                cell.setCellLabelFont(UIFont.boldSystemFont(ofSize: 16))
             } else {
                 cell.setString(string: (rows[indexPath.row - 1][indexPath.column - 1] ))
+                cell.backgroundColor = self.cellBackgroundColor
+                cell.setCellLabelFont(UIFont.systemFont(ofSize: 16))
             }
             return cell
         }

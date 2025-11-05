@@ -20,8 +20,14 @@ final class CSWisualTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+
 
     func testExample() async throws {
+        
+       
+        
+        
         // TODO: Add test cases
 //        let url = Bundle.main.url(forResource: "BitcoinTest", withExtension: "csv")!
 //        let reader = try await CSVFileReader.liveValue.readFromURL(url)

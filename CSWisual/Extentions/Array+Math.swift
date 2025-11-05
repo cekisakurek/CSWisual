@@ -10,7 +10,7 @@ import SigmaSwiftStatistics
 
 extension Array where Element == Double {
 
-    func frequencies() -> [Double: Double] {
+    func density() -> [Double: Double] {
         guard let kernel = KernelDensityEstimation(self)
         else { return ([:]) }
         return self.reduce([Double: Double]()) { partialResult, value in
@@ -22,7 +22,9 @@ extension Array where Element == Double {
     }
 
     func probabilityDistribution() -> [Double: Double] {
-        self.sorted()
+        let mean = Sigma.average(self) ?? 1
+        let std = Sigma.standardDeviationSample(self) ?? 0
+        return self.sorted()
             .reduce([Double: Double]()) { partialResult, value in
                 let count = Double(self.count)
                 var result = partialResult
@@ -35,7 +37,7 @@ extension Array where Element == Double {
                 } else {
                     pValue = (Double(index) - 0.3175) / (count + 0.365)
                 }
-                let key = Sigma.normalQuantile(p: pValue, μ: 0, σ: 1)!
+                let key = Sigma.normalQuantile(p: pValue, μ: mean, σ: std)!
                 result[key] = value
                 return result
             }
@@ -83,5 +85,17 @@ extension Array where Element == Double {
         let max = self.max() ?? 0.0
         let min = self.min() ?? Double.greatestFiniteMagnitude
         return self.map({ ($0 - min) / (max - min) })
+    }
+    
+    func swilk() -> (Double, Double)? {
+        guard self.count > 0 else { return nil }
+        let arr = self.sorted()
+
+        let (wValue, pValue, error) = CSWisual.swilk(x: arr)
+
+        if error == .noError {
+            return (wValue, pValue)
+        }
+        return nil
     }
 }

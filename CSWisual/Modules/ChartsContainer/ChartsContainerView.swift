@@ -11,25 +11,31 @@ import ComposableArchitecture
 struct ChartsContainerView: View {
 
     @Bindable var store: StoreOf<ChartsContainerModule>
-
+    
     var body: some View {
         NavigationSplitView(
             sidebar: {
                 List(store.columns, id: \.name, selection: $store.selectedHeaders) {
                     Text("\($0.name) (\($0.type.rawValue.capitalized))")
                         .selectionDisabled(!$0.isNumber)
-                        .foregroundColor($0.isNumber ? .black : .gray)
+                        .foregroundColor($0.isNumber ? titleColor : disabledTitleColor)
                 }
+                .environment(\.editMode, .constant(.active))
                 .navigationTitle("Columns")
-                .toolbar {
-                    EditButton()
-                }
             },
             detail: {
                 GeometryReader { geo in
                     let spacing = (geo.safeAreaInsets.top + geo.safeAreaInsets.top)
                     ScrollView {
                         VStack {
+                            Picker("", selection: $store.chartType) {
+                                ForEach(ChartType.allCases) {
+                                    Text($0.rawValue)
+                                        .tag($0)
+                                }
+                            }
+                            .padding(8)
+                            .pickerStyle(.segmented)
                             ForEach(store.scope(state: \.charts, action: \.chartActions)) { rowStore in
                                 GroupBox(rowStore.columnName) {
                                     ChartDrawView(store: rowStore)
@@ -43,19 +49,16 @@ struct ChartsContainerView: View {
                         }
                     }
                 }
-                .toolbar {
-                    ToolbarItemGroup(placement: .principal) {
-                        Picker("", selection: $store.chartType) {
-                            ForEach(ChartType.allCases) {
-                                Text($0.rawValue)
-                                    .tag($0)
-                            }
-                        }
-                        .pickerStyle(.segmented)
-                    }
-                }
             }
         )
+    }
+    
+    var titleColor: Color {
+        Color(UIColor(named: "TableTitleColor")!)
+    }
+    
+    var disabledTitleColor: Color {
+        Color(UIColor(named: "TableTitleColorDisabled")!)
     }
 }
 

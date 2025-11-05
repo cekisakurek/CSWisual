@@ -22,7 +22,9 @@ struct AppView: View {
                     ProgressView()
                 } else {
                     Button(
-                        action: { store.send(.showDocumentPicker) },
+                        action: {
+                            store.send(.showDocumentPicker)
+                        },
                         label: { Text("Open") }
                     )
                 }
@@ -36,6 +38,21 @@ struct AppView: View {
             store.send(.appDidLaunched)
         }
         .navigationTitle($store.title)
+    }
+    
+    func printContent(_: Any?) {
+        let renderer = ItemPrintPageRenderer(items: [])
+        
+        let info = UIPrintInfo.printInfo()
+        info.outputType = .general
+        info.orientation = .portrait
+        info.jobName = "CSWisual"
+        
+        let printInteractionController = UIPrintInteractionController.shared
+        printInteractionController.printPageRenderer = renderer
+        printInteractionController.printInfo = info
+        
+        printInteractionController.present(animated: true)
     }
 }
 

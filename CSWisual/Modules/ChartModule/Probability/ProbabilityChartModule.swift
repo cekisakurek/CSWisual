@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import UIKit
 
 @Reducer
 struct ProbabilityChartModule {
@@ -30,6 +31,7 @@ struct ProbabilityChartModule {
     enum Action {
         case calculate
         case calculationComplete(Result<ProbabilityChartResult, Error>)
+        case print(UIImage)
     }
 
     // MARK: - Dependencies
@@ -59,7 +61,33 @@ struct ProbabilityChartModule {
                 state.probabilities = nil
                 state.normal = nil
                 return .none
+            case .print(let image):
+                sendToPrinter(image: image)
+                return .none
             }
         }
     }
+    
+    func sendToPrinter(image: UIImage) {
+            let printController = UIPrintInteractionController.shared
+            
+            let printInfo = UIPrintInfo(dictionary: nil)
+            printInfo.outputType = .general
+            printInfo.jobName = "My Image Print"
+            printController.printInfo = printInfo
+            
+            // Set the printing item (our image)
+            printController.printingItem = image
+            
+            // Present the print dialog
+            printController.present(animated: true) { (controller, completed, error) in
+                if completed {
+                    print("Print completed")
+                } else if let error = error {
+                    print("Print failed: \(error.localizedDescription)")
+                } else {
+                    print("Print canceled")
+                }
+            }
+        }
 }
